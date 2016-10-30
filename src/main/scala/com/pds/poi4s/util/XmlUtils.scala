@@ -9,4 +9,5 @@ object XmlUtils {
 
 class NodeSeqHelpers(private val underlying: NodeSeq) {
   def textOption: Option[String] = underlying.headOption.map(_.text)
+  def doubleOption: Option[Double] = underlying.headOption.map(_.text.toDouble)
 }

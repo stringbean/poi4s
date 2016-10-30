@@ -11,8 +11,19 @@ class GpxReaderSpec extends FlatSpec with Matchers {
 
     parsed.name shouldBe Some("Observatories")
 
-    parsed.waypoints should contain (
-      WayPoint(51.4778,-0.0014, Some("Royal Observatory, Greenwich"), Some(46.0))
+    parsed.waypoints shouldBe Seq(
+      WayPoint(51.4778,
+        -0.0014,
+        Some(46.0),
+        Some("Royal Observatory, Greenwich"),
+        Some("Now a museum"),
+        Some("https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich")),
+      WayPoint(53.23625,
+        -2.307139,
+        None,
+        Some("Jodrell Bank"),
+        None,
+        None)
     )
   }
 }
