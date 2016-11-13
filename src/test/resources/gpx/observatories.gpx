@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.0">
-	<name>Observatories</name>
+    <metadata>
+	    <name>Observatories</name>
+        <time>2016-11-13T12:31:43.827Z</time>
+    </metadata>
+
 	<wpt lat="51.4778" lon="-0.0014">
 		<name>Royal Observatory, Greenwich</name>
-        <cmt>Now a museum</cmt>
+        <cmt>also known as Royal Greenwich Observatory</cmt>
+        <desc>The Royal Observatory, Greenwich (known as the Royal Greenwich Observatory or RGO when the working institution moved from Greenwich to Herstmonceux after World War II) is an observatory situated on a hill in Greenwich Park, overlooking the River Thames. It played a major role in the history of astronomy and navigation, and is best known as the location of the prime meridian.</desc>
         <link>https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich</link>
+        <src>Wikipedia</src>
 		<ele>46</ele>
 	</wpt>
 

@@ -11,7 +11,9 @@ object WayPoint {
       (node \ "ele").doubleOption,
       (node \ "name").textOption,
       (node \ "cmt").textOption,
-      (node \ "link").textOption)
+      (node \ "desc").textOption,
+      (node \ "link").textOption,
+      (node \ "src").textOption)
   }
 }
 
@@ -20,4 +22,6 @@ case class WayPoint(lat: Double,
                     elevation: Option[Double],
                     name: Option[String],
                     comment: Option[String],
-                    link: Option[String])
+                    description: Option[String],
+                    link: Option[String],
+                    source: Option[String])
