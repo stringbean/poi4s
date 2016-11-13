@@ -5,7 +5,18 @@ import com.pds.poi4s.util.XmlUtils._
 import scala.xml.Node
 
 object WayPoint {
-  def apply(node: Node): WayPoint = {
+  private[gpx] def parseVersion10(node: Node): WayPoint = {
+    WayPoint((node \@ "lat").toDouble,
+      (node \@ "lon").toDouble,
+      (node \ "ele").doubleOption,
+      (node \ "name").textOption,
+      (node \ "cmt").textOption,
+      (node \ "desc").textOption,
+      (node \ "url").textOption,
+      (node \ "src").textOption)
+  }
+
+  private[gpx] def parseVersion11(node: Node): WayPoint = {
     WayPoint((node \@ "lat").toDouble,
       (node \@ "lon").toDouble,
       (node \ "ele").doubleOption,

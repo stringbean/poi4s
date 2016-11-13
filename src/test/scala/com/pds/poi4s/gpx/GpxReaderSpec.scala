@@ -1,5 +1,6 @@
 package com.pds.poi4s.gpx
 
+import java.io.InputStream
 import java.time.{ZoneOffset, ZonedDateTime}
 
 import org.scalatest.{FlatSpec, Matchers}
@@ -8,9 +9,34 @@ import scala.language.higherKinds
 
 class GpxReaderSpec extends FlatSpec with Matchers {
 
-  "GpxReader" should "parse valid GPX" in {
-    val parsed = GpxReader.read(GpxReader.getClass.getResourceAsStream("/gpx/observatories.gpx"))
+  "GpxReader" should "parse a valid GPX 1.1 file" in {
+    parseAndCheckFile(getClass.getResourceAsStream("/gpx/1.1/observatories.gpx"))
+  }
 
+  it should "parse a valid GPX 1.0 file" in {
+    parseAndCheckFile(getClass.getResourceAsStream("/gpx/1.0/observatories.gpx"))
+  }
+
+  it should "reject an un-versioned GPX file" in {
+    val e = the[GpxParseException] thrownBy {
+      GpxReader.read(getClass.getResourceAsStream("/gpx/missing-version.gpx"))
+    }
+
+    e.getMessage shouldBe "Missing GPX version"
+  }
+
+  it should "reject an unsupported version GPX file" in {
+    val e = the[GpxParseException] thrownBy {
+      GpxReader.read(getClass.getResourceAsStream("/gpx/unsupported-version.gpx"))
+    }
+
+    e.getMessage shouldBe "Unsupported GPX version 2.0"
+  }
+
+  private def parseAndCheckFile(is: InputStream): Unit = {
+    val parsed = GpxReader.read(is)
+
+    parsed.creator shouldBe "Unit tests"
     parsed.name shouldBe Some("Observatories")
     parsed.created shouldBe Some(
       ZonedDateTime.of(2016, 11, 13, 12, 31, 43, 827000000, ZoneOffset.UTC)
