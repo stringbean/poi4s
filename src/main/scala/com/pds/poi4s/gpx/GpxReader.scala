@@ -2,6 +2,7 @@ package com.pds.poi4s.gpx
 
 import java.io.InputStream
 
+import com.pds.poi4s.gpx.GpxVersion._
 import com.pds.poi4s.util.XmlUtils._
 
 import scala.xml.{Elem, XML}
@@ -33,7 +34,7 @@ object GpxReader {
 
     val wayPoints = (xml \\ "wpt").map(WayPoint.parseVersion10)
 
-    GpxFile(creator, name, created, wayPoints)
+    GpxFile(Version10, creator, name, created, wayPoints)
   }
 
   private def parseVersion11(xml: Elem): GpxFile = {
@@ -43,6 +44,6 @@ object GpxReader {
 
     val wayPoints = (xml \\ "wpt").map(WayPoint.parseVersion11)
 
-    GpxFile(creator, name, created, wayPoints)
+    GpxFile(Version11, creator, name, created, wayPoints)
   }
 }
