@@ -6,8 +6,6 @@ import java.time.{ZoneOffset, ZonedDateTime}
 import com.pds.poi4s.gpx.GpxVersion._
 import org.scalatest.{FlatSpec, Matchers}
 
-import scala.language.higherKinds
-
 class GpxReaderSpec extends FlatSpec with Matchers {
 
   "GpxReader" should "parse a valid GPX 1.1 file" in {
