@@ -11,11 +11,30 @@ object GpxWriter {
 
   def write(gpxFile: GpxFile, os: OutputStream, version: GpxVersion = Version11): Unit = {
     val xml = version match {
-      case Version10 => ???
+      case Version10 => generateVersion10(gpxFile)
       case Version11 => generateVersion11(gpxFile)
     }
 
     os.write(prettyPrinter.format(xml).getBytes("UTF-8"))
+  }
+
+  private def generateVersion10(gpxFile: GpxFile): Elem = {
+    <gpx version="1.0" creator="poi4s">
+      {gpxFile.name.map(n => <name>{n}</name>).orNull}
+
+      {
+        gpxFile.waypoints map { wpt =>
+          <wpt lat={wpt.lat.toString} lon={wpt.lon.toString}>
+            {wpt.name.map(n => <name>{n}</name>).orNull}
+            {wpt.elevation.map(e => <ele>{e}</ele>).orNull}
+            {wpt.comment.map(c => <cmt>{c}</cmt>).orNull}
+            {wpt.description.map(d => <desc>{d}</desc>).orNull}
+            {wpt.link.map(l => <url>{l}</url>).orNull}
+            {wpt.source.map(s => <src>{s}</src>).orNull}
+          </wpt>
+        }
+      }
+    </gpx>
   }
 
   private def generateVersion11(gpxFile: GpxFile): Elem = {
@@ -25,16 +44,16 @@ object GpxWriter {
       </metadata>
 
       {
-        gpxFile.waypoints map { wpt =>
-          <wpt lat={wpt.lat.toString} lon={wpt.lon.toString}>
-            {wpt.name.map(n => <name>{n}</name>).orNull}
-            {wpt.elevation.map(e => <ele>{e}</ele>).orNull}
-            {wpt.comment.map(c => <cmt>{c}</cmt>).orNull}
-            {wpt.description.map(d => <desc>{d}</desc>).orNull}
-            {wpt.link.map(l => <link>{l}</link>).orNull}
-            {wpt.source.map(s => <src>{s}</src>).orNull}
-          </wpt>
-        }
+      gpxFile.waypoints map { wpt =>
+        <wpt lat={wpt.lat.toString} lon={wpt.lon.toString}>
+          {wpt.name.map(n => <name>{n}</name>).orNull}
+          {wpt.elevation.map(e => <ele>{e}</ele>).orNull}
+          {wpt.comment.map(c => <cmt>{c}</cmt>).orNull}
+          {wpt.description.map(d => <desc>{d}</desc>).orNull}
+          {wpt.link.map(l => <link>{l}</link>).orNull}
+          {wpt.source.map(s => <src>{s}</src>).orNull}
+        </wpt>
+      }
       }
     </gpx>
   }
