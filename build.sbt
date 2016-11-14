@@ -25,5 +25,6 @@ initialize := {
 libraryDependencies ++= Seq(
   "org.scala-lang.modules"  %% "scala-xml"  % "1.0.6",
   "com.beachape"            %% "enumeratum" % "1.4.17",
-  "org.scalatest"           %% "scalatest"  % "3.0.1"   % "test"
+  "org.scalatest"           %% "scalatest"  % "3.0.1"   % "test",
+  "commons-io"              %  "commons-io" % "2.5"     % "test"
 )

@@ -5,25 +5,34 @@ import java.io.InputStream
 import com.pds.poi4s.gpx.GpxVersion._
 import com.pds.poi4s.util.XmlUtils._
 
-import scala.xml.{Elem, XML}
+import scala.xml.{Elem, SAXException, XML}
 
 object GpxReader {
   @throws[GpxParseException]
   def read(is: InputStream): GpxFile = {
-    val xml = XML.load(is)
+    try {
+      val xml = XML.load(is)
 
-    xml \@ "version" match {
-      case "1.0" =>
-        parseVersion10(xml)
+      if (xml.label != "gpx") {
+        throw new GpxParseException("Invalid GPX file")
+      }
 
-      case "1.1" =>
-        parseVersion11(xml)
+      xml \@ "version" match {
+        case "1.0" =>
+          parseVersion10(xml)
 
-      case v if v.isEmpty =>
-        throw new GpxParseException("Missing GPX version")
+        case "1.1" =>
+          parseVersion11(xml)
 
-      case v =>
-        throw new GpxParseException(s"Unsupported GPX version $v")
+        case v if v.isEmpty =>
+          throw new GpxParseException("Missing GPX version")
+
+        case v =>
+          throw new GpxParseException(s"Unsupported GPX version $v")
+      }
+    } catch {
+      case se: SAXException =>
+        throw new GpxParseException("Invalid GPX file", se)
     }
   }
 

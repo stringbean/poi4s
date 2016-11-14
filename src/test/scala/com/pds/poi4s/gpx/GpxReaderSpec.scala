@@ -1,9 +1,11 @@
 package com.pds.poi4s.gpx
 
 import java.io.InputStream
+import java.nio.charset.StandardCharsets
 import java.time.{ZoneOffset, ZonedDateTime}
 
 import com.pds.poi4s.gpx.GpxVersion._
+import org.apache.commons.io.IOUtils
 import org.scalatest.{FlatSpec, Matchers}
 
 class GpxReaderSpec extends FlatSpec with Matchers {
@@ -32,6 +34,30 @@ class GpxReaderSpec extends FlatSpec with Matchers {
     }
 
     e.getMessage shouldBe "Unsupported GPX version 2.0"
+  }
+
+  it should "reject non-XML file" in {
+    val e = the[GpxParseException] thrownBy {
+      GpxReader.read(IOUtils.toInputStream("Not XML", StandardCharsets.UTF_8))
+    }
+
+    e.getMessage shouldBe "Invalid GPX file"
+  }
+
+  it should "reject broken XML file" in {
+    val e = the[GpxParseException] thrownBy {
+      GpxReader.read(IOUtils.toInputStream("<gpx>incorrect termination</foo>", StandardCharsets.UTF_8))
+    }
+
+    e.getMessage shouldBe "Invalid GPX file"
+  }
+
+  it should "reject non-GPX XML file" in {
+    val e = the[GpxParseException] thrownBy {
+      GpxReader.read(IOUtils.toInputStream("<wrong>xml</wrong>", StandardCharsets.UTF_8))
+    }
+
+    e.getMessage shouldBe "Invalid GPX file"
   }
 
   private def parseAndCheckFile(is: InputStream): GpxFile = {
