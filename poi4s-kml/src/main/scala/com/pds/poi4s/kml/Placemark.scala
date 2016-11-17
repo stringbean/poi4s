@@ -1,6 +1,7 @@
 package com.pds.poi4s.kml
 
 import scala.xml.Node
+import com.pds.poi4s.util.XmlUtils._
 
 object Placemark {
   private val Coordinates = "(\\-?[0-9]+\\.[0-9]+), *(\\-?[0-9]+\\.[0-9]+)".r
@@ -21,8 +22,14 @@ object Placemark {
 
   private[kml] def parseVersion22(node: Node): Placemark = {
     val coordinate = parseCoordinates((node \ "Point" \ "coordinates").text)
-    Placemark(coordinate._1, coordinate._2, coordinate._3)
+    Placemark(coordinate._1,
+      coordinate._2,
+      coordinate._3,
+      (node \ "name").textOption)
   }
 }
 
-case class Placemark(lat: Double, lon: Double, elevation: Option[Double])
+case class Placemark(lat: Double,
+                     lon: Double,
+                     elevation: Option[Double],
+                     name: Option[String])

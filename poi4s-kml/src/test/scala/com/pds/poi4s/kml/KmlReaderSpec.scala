@@ -58,10 +58,12 @@ class KmlReaderSpec extends FlatSpec with Matchers {
     parsed.placemarks shouldBe Seq(
       Placemark(51.4778,
         -0.0014,
-        Some(46.0)),
+        Some(46.0),
+        Some("Royal Observatory, Greenwich")),
       Placemark(53.23625,
         -2.307139,
-        None)
+        None,
+        Some("Jodrell Bank"))
     )
 
     parsed
