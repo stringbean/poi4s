@@ -14,5 +14,9 @@ lazy val gpx = project.in(file("poi4s-gpx"))
   .settings(commonSettings)
   .dependsOn(common)
 
+lazy val kml = project.in(file("poi4s-kml"))
+  .settings(commonSettings)
+  .dependsOn(common)
+
 lazy val root = project.in(file("."))
-  .aggregate(common, gpx)
+  .aggregate(common, gpx, kml)
