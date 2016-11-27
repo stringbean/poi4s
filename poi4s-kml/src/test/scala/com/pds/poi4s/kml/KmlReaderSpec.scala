@@ -4,12 +4,13 @@ import java.io.InputStream
 import java.nio.charset.StandardCharsets
 
 import org.apache.commons.io.IOUtils
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest._
+import org.scalatest.matchers._
 
 class KmlReaderSpec extends FlatSpec with Matchers {
 
   "KmlReader" should "parse valid file" in {
-    val parsed = parseAndCheckFile(getClass.getResourceAsStream("/observatories.kml"))
+    parseAndCheckFile(getClass.getResourceAsStream("/observatories.kml"))
   }
 
   it should "reject a KML file without namespace" in {
@@ -52,20 +53,63 @@ class KmlReaderSpec extends FlatSpec with Matchers {
     e.getMessage shouldBe "Invalid KML file"
   }
 
+
+  it should "reject KML file with invalid coordinates" in {
+    val e = the[KmlParseException] thrownBy {
+      KmlReader.read(getClass.getResourceAsStream("/invalid-coordinates.kml"))
+    }
+
+    e.getMessage shouldBe "Invalid coordinate [invalid]"
+  }
+
   private def parseAndCheckFile(is: InputStream): KmlFile = {
     val parsed = KmlReader.read(is)
 
-    parsed.placemarks shouldBe Seq(
-      Placemark(51.4778,
-        -0.0014,
-        Some(46.0),
-        Some("Royal Observatory, Greenwich")),
-      Placemark(53.23625,
-        -2.307139,
-        None,
-        Some("Jodrell Bank"))
+    parsed.placemarks.head should have (
+      'lat (51.4778),
+      'lon (-0.001400),
+      'elevation (Some(46.0)),
+      'name (Some("Royal Observatory, Greenwich"))
+    )
+
+    parsed.placemarks.head.description should beNormalisedOption(
+      """
+        |The Royal Observatory, Greenwich (known as the Royal Greenwich Observatory or RGO when the working institution
+        |moved from Greenwich to Herstmonceux after World War II) is an observatory situated on a hill in Greenwich Park,
+        |overlooking the River Thames. It played a major role in the history of astronomy and navigation, and is best
+        |known as the location of the prime meridian.<br/>
+        |<a href="https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich">Wikipedia Article</a>
+      """.stripMargin
+    )
+
+    parsed.placemarks(1) should have (
+      'lat (53.23625),
+      'lon (-2.307139),
+      'elevation (None),
+      'name (Some("Jodrell Bank")),
+      'description (None)
     )
 
     parsed
+  }
+
+  def beNormalised(expected: String): Matcher[String] = new NormalisedStringMatcher(expected)
+
+  def beNormalisedOption(expected: String): Matcher[Option[String]] =
+    beNormalised(expected) compose { (o: Option[String]) => o.get }
+
+  class NormalisedStringMatcher(expected: String) extends Matcher[String] {
+    override def apply(left: String): MatchResult = {
+      MatchResult(
+        normalise(left).trim == normalise(expected).trim,
+        s"[$left] did not match [$expected]",
+        s"[$left] matched [$expected]"
+      )
+    }
+
+    private def normalise(in: String): String = {
+      in.replaceAll("\\n", " ")
+        .replaceAll("  +", " ")
+    }
   }
 }

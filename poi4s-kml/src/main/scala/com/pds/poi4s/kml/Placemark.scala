@@ -25,11 +25,13 @@ object Placemark {
     Placemark(coordinate._1,
       coordinate._2,
       coordinate._3,
-      (node \ "name").textOption)
+      (node \ "name").textOption,
+      (node \ "description").textOption.map(_.trim))
   }
 }
 
 case class Placemark(lat: Double,
                      lon: Double,
                      elevation: Option[Double],
-                     name: Option[String])
+                     name: Option[String],
+                     description: Option[String])
