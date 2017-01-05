@@ -41,7 +41,7 @@ object GpxReader {
     val name = (xml \ "name").textOption
     val created = (xml \ "time").dateTimeOption
 
-    val wayPoints = (xml \\ "wpt").map(WayPoint.parseVersion10)
+    val wayPoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion10)
 
     GpxFile(Version10, creator, name, created, wayPoints)
   }
@@ -51,7 +51,7 @@ object GpxReader {
     val name = (xml \ "metadata" \ "name").textOption
     val created = (xml \ "metadata" \ "time").dateTimeOption
 
-    val wayPoints = (xml \\ "wpt").map(WayPoint.parseVersion11)
+    val wayPoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion11)
 
     GpxFile(Version11, creator, name, created, wayPoints)
   }

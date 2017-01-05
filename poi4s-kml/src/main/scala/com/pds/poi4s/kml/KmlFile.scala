@@ -1,3 +1,5 @@
 package com.pds.poi4s.kml
 
-case class KmlFile(placemarks: Seq[Placemark])
+import com.pds.poi4s.model.Waypoint
+
+case class KmlFile(placemarks: Seq[Waypoint])
