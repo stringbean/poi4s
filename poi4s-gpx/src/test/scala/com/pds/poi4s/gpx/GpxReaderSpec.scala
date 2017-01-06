@@ -85,7 +85,7 @@ class GpxReaderSpec extends FlatSpec with Matchers {
             Some("https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich"),
             Some("Wikipedia")
         ),
-        Waypoint(53.23625, -2.307139, None, Some("Jodrell Bank"), None, None, None, None)
+        Waypoint(53.23625, -2.307139, name = Some("Jodrell Bank"))
     )
 
     parsed

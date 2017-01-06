@@ -8,7 +8,7 @@ object KmlReader {
   private[kml] val KmlNamespace = "http://www.opengis.net/kml/([0-9]+.[0-9]+)".r
 
   @throws[KmlParseException]
-  def read(is: InputStream) = {
+  def read(is: InputStream): KmlFile = {
     try {
       val xml = XML.load(is)
 
