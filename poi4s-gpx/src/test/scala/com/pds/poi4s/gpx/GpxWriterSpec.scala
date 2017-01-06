@@ -27,22 +27,22 @@ class GpxWriterSpec extends FlatSpec with Matchers {
 
   it should "generate GPX 1.1 file with waypoints" in {
     val gpx = GpxFile(
-        Version11,
-        "poi4s",
-        Some("Waypoints GPX"),
-        None,
-        Seq(
-            Waypoint(
-                51.4994794d,
-                -0.12480919999995876d,
-                Some(2.134d),
-                Some("Palace of Westminster"),
-                Some("GPS coordinates taken from Google Maps"),
-                Some("Seat of the UK parliament"),
-                Some("https://en.wikipedia.org/wiki/Palace_of_Westminster"),
-                Some("Google Maps")
-            )
+      Version11,
+      "poi4s",
+      Some("Waypoints GPX"),
+      None,
+      Seq(
+        Waypoint(
+          51.4994794d,
+          -0.12480919999995876d,
+          Some(2.134d),
+          Some("Palace of Westminster"),
+          Some("GPS coordinates taken from Google Maps"),
+          Some("Seat of the UK parliament"),
+          Some("https://en.wikipedia.org/wiki/Palace_of_Westminster"),
+          Some("Google Maps")
         )
+      )
     )
 
     val xml = generateFile(gpx, Version11)
@@ -78,22 +78,22 @@ class GpxWriterSpec extends FlatSpec with Matchers {
 
   it should "generate GPX 1.0 file with waypoints" in {
     val gpx = GpxFile(
-        Version10,
-        "poi4s",
-        Some("Waypoints GPX"),
-        None,
-        Seq(
-            Waypoint(
-                51.4994794d,
-                -0.12480919999995876d,
-                Some(2.134d),
-                Some("Palace of Westminster"),
-                Some("GPS coordinates taken from Google Maps"),
-                Some("Seat of the UK parliament"),
-                Some("https://en.wikipedia.org/wiki/Palace_of_Westminster"),
-                Some("Google Maps")
-            )
+      Version10,
+      "poi4s",
+      Some("Waypoints GPX"),
+      None,
+      Seq(
+        Waypoint(
+          51.4994794d,
+          -0.12480919999995876d,
+          Some(2.134d),
+          Some("Palace of Westminster"),
+          Some("GPS coordinates taken from Google Maps"),
+          Some("Seat of the UK parliament"),
+          Some("https://en.wikipedia.org/wiki/Palace_of_Westminster"),
+          Some("Google Maps")
         )
+      )
     )
 
     val xml = generateFile(gpx, Version10)

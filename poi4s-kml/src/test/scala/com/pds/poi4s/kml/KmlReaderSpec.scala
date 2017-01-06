@@ -53,7 +53,6 @@ class KmlReaderSpec extends FlatSpec with Matchers {
     e.getMessage shouldBe "Invalid KML file"
   }
 
-
   it should "reject KML file with invalid coordinates" in {
     val e = the[KmlParseException] thrownBy {
       KmlReader.read(getClass.getResourceAsStream("/invalid-coordinates.kml"))
@@ -65,7 +64,7 @@ class KmlReaderSpec extends FlatSpec with Matchers {
   private def parseAndCheckFile(is: InputStream): KmlFile = {
     val parsed = KmlReader.read(is)
 
-    parsed.placemarks.head should have (
+    parsed.placemarks.head should have(
       'lat (51.4778),
       'lon (-0.001400),
       'elevation (Some(46.0)),
@@ -82,7 +81,7 @@ class KmlReaderSpec extends FlatSpec with Matchers {
       """.stripMargin
     )
 
-    parsed.placemarks(1) should have (
+    parsed.placemarks(1) should have(
       'lat (53.23625),
       'lon (-2.307139),
       'elevation (None),
@@ -96,7 +95,9 @@ class KmlReaderSpec extends FlatSpec with Matchers {
   def beNormalised(expected: String): Matcher[String] = new NormalisedStringMatcher(expected)
 
   def beNormalisedOption(expected: String): Matcher[Option[String]] =
-    beNormalised(expected) compose { (o: Option[String]) => o.get }
+    beNormalised(expected) compose { (o: Option[String]) =>
+      o.get
+    }
 
   class NormalisedStringMatcher(expected: String) extends Matcher[String] {
     override def apply(left: String): MatchResult = {

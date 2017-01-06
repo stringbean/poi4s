@@ -24,14 +24,14 @@ object Placemark {
 
   private[kml] def parseVersion22(node: Node): Waypoint = {
     val coordinate = parseCoordinates((node \ "Point" \ "coordinates").text)
-    Waypoint(coordinate._1,
+    Waypoint(
+      coordinate._1,
       coordinate._2,
       coordinate._3,
       (node \ "name").textOption,
       None,
       (node \ "description").textOption.map(_.trim),
       None,
-      None
-    )
+      None)
   }
 }
