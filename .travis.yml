@@ -19,6 +19,6 @@ before_cache:
 
 # build with scoverage report and upload to codecov
 script:
-  - sbt coverage test coverageReport
+  - sbt coverage test coverageReport coverageAggregate
 after_success:
   - bash <(curl -s https://codecov.io/bash)
