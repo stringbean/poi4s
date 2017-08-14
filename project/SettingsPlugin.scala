@@ -3,20 +3,29 @@ import sbt.Keys._
 import sbt.plugins.JvmPlugin
 
 object SettingsPlugin extends AutoPlugin {
-  val javaVersion = 8
-
   override def trigger: PluginTrigger = AllRequirements
   override def requires: Plugins = JvmPlugin
+
+  object autoImport {
+    val scalaXml = Seq(
+      "org.scala-lang.modules"  %% "scala-xml"  % "1.0.6"
+    )
+    val enumeratum = Seq(
+      "com.beachape"            %% "enumeratum" % "1.5.12"
+    )
+  }
+
+  val javaVersion = "1.8"
 
   override def projectSettings: Seq[Setting[_]] = Seq(
     organization := (organization in LocalRootProject).value,
     version := (version in LocalRootProject).value,
     scalaVersion := (scalaVersion in LocalRootProject).value,
     crossScalaVersions := (crossScalaVersions in LocalRootProject).value,
-    javacOptions ++= Seq("-source", s"1.$javaVersion",
-      "-target", s"1.$javaVersion",
+    javacOptions ++= Seq("-source", javaVersion,
+      "-target", javaVersion,
       "-Xlint"),
-    scalacOptions ++= Seq(s"-target:jvm-1.$javaVersion",
+    scalacOptions ++= Seq(s"-target:jvm-$javaVersion",
       "-deprecation",
       "-feature",
       "-unchecked"),
@@ -30,12 +39,5 @@ object SettingsPlugin extends AutoPlugin {
     )
   )
 
-  object autoImport {
-    val scalaXml = Seq(
-      "org.scala-lang.modules"  %% "scala-xml"  % "1.0.6"
-    )
-    val enumeratum = Seq(
-      "com.beachape"            %% "enumeratum" % "1.5.12"
-    )
-  }
+
 }
