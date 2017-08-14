@@ -1,4 +1,5 @@
 import PgpKeys.{publishLocalSigned, publishSigned}
+import microsites.ExtraMdFileConfig
 
 organization := "software.purpledragon"
 
@@ -31,6 +32,22 @@ lazy val root = project
     )
   )
   .enablePlugins(ScalaUnidocPlugin)
+
+lazy val docs = project
+  .in(file("docs"))
+  .enablePlugins(MicrositesPlugin)
+  .settings(
+    micrositeName := "poi4s",
+    micrositeDescription := "GPS manipulation library for Scala",
+    micrositeAuthor := "Michael Stringer",
+    micrositeHomepage := "https://stringbean.github.io/poi4s",
+    micrositeGithubOwner := "stringbean",
+    micrositeGithubRepo := "poi4s",
+    micrositeBaseUrl := "/poi4s",
+    micrositeDocumentationUrl := "docs",
+    micrositeExtraMdFiles := Map(file("README.md") -> ExtraMdFileConfig("index.md", "home")),
+    micrositeGitterChannel := false
+  )
 
 useGpg := true
 usePgpKeyHex("B19D7A14F6F8B3BFA9FF655A5216B5A5F723A92D")

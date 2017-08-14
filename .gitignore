@@ -11,3 +11,6 @@ project/plugins/project/
 
 # Vim
 .*.swp
+
+# Generated via microsite
+/docs/src/main/tut/index.md

@@ -13,3 +13,4 @@ addSbtPlugin("com.jsuereth" % "sbt-pgp" % "1.0.0")
 
 // ghpages & site generation
 addSbtPlugin("com.eed3si9n" % "sbt-unidoc" % "0.4.1")
+addSbtPlugin("com.47deg"  % "sbt-microsites" % "0.6.1")
