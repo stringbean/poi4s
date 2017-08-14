@@ -1,0 +1,9 @@
+codecov:
+  status:
+    project:
+      default:
+        target: 90%
+    patch:
+      default:
+        target: 90%
+        threshold: 5%
