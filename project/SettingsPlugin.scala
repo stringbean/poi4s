@@ -36,8 +36,11 @@ object SettingsPlugin extends AutoPlugin {
     libraryDependencies ++= Seq(
       "org.scalatest"           %% "scalatest"  % "3.0.3" % "test",
       "commons-io"              %  "commons-io" % "2.5"     % "test"
-    )
+    ),
+    licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
+    developers := List(
+      Developer("stringean", "Michael Stringer", "@the_stringbean", url("https://github.com/stringbean"))
+    ),
+    scmInfo := Some(ScmInfo(url("https://github.com/stringbean/poi4s"), "https://github.com/stringbean/poi4s.git"))
   )
-
-
 }
