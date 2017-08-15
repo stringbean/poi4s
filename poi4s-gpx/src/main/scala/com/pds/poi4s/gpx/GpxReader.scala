@@ -2,14 +2,14 @@ package com.pds.poi4s.gpx
 
 import java.io.InputStream
 
-import com.pds.poi4s.gpx.GpxVersion._
+import com.pds.poi4s.model.PoiFile
 import com.pds.poi4s.util.XmlUtils._
 
 import scala.xml.{Elem, SAXException, XML}
 
 object GpxReader {
   @throws[GpxParseException]
-  def read(is: InputStream): GpxFile = {
+  def read(is: InputStream): PoiFile = {
     try {
       val xml = XML.load(is)
 
@@ -36,23 +36,35 @@ object GpxReader {
     }
   }
 
-  private def parseVersion10(xml: Elem): GpxFile = {
+  private def parseVersion10(xml: Elem): PoiFile = {
     val creator = xml \@ "creator"
     val name = (xml \ "name").textOption
-    val created = (xml \ "time").dateTimeOption
+    val created = (xml \ "time").instantOption
 
-    val wayPoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion10)
+    val waypoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion10)
 
-    GpxFile(Version10, creator, name, created, wayPoints)
+    PoiFile(
+      name = name,
+      creator = Some(creator),
+      createdAt = created,
+      version = Some("1.0"),
+      waypoints = waypoints
+    )
   }
 
-  private def parseVersion11(xml: Elem): GpxFile = {
+  private def parseVersion11(xml: Elem): PoiFile = {
     val creator = xml \@ "creator"
     val name = (xml \ "metadata" \ "name").textOption
-    val created = (xml \ "metadata" \ "time").dateTimeOption
+    val created = (xml \ "metadata" \ "time").instantOption
 
-    val wayPoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion11)
+    val waypoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion11)
 
-    GpxFile(Version11, creator, name, created, wayPoints)
+    PoiFile(
+      name = name,
+      creator = Some(creator),
+      createdAt = created,
+      version = Some("1.1"),
+      waypoints = waypoints
+    )
   }
 }

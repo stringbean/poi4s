@@ -2,10 +2,12 @@ package com.pds.poi4s.model
 
 import java.time.Instant
 
+// TODO include meta about origin file
 case class PoiFile(
     name: Option[String] = None,
     description: Option[String] = None,
     creator: Option[String] = None,
+    version: Option[String] = None,
     createdAt: Option[Instant] = None,
     waypoints: Seq[Waypoint] = Nil) {
 

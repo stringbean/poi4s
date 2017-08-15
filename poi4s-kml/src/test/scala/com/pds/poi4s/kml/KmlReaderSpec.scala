@@ -3,6 +3,7 @@ package com.pds.poi4s.kml
 import java.io.InputStream
 import java.nio.charset.StandardCharsets
 
+import com.pds.poi4s.model.PoiFile
 import org.apache.commons.io.IOUtils
 import org.scalatest._
 import org.scalatest.matchers._
@@ -61,20 +62,20 @@ class KmlReaderSpec extends FlatSpec with Matchers {
     e.getMessage shouldBe "Invalid coordinate [invalid]"
   }
 
-  private def parseAndCheckFile(is: InputStream): KmlFile = {
+  private def parseAndCheckFile(is: InputStream): PoiFile = {
     val parsed = KmlReader.read(is)
 
     parsed.name shouldBe Some("Observatories")
     parsed.description shouldBe Some("List of observatories")
 
-    parsed.placemarks.head should have(
+    parsed.waypoints.head should have(
       'lat (51.4778),
       'lon (-0.001400),
       'elevation (Some(46.0)),
       'name (Some("Royal Observatory, Greenwich"))
     )
 
-    parsed.placemarks.head.description should beNormalisedOption(
+    parsed.waypoints.head.description should beNormalisedOption(
       """
         |The Royal Observatory, Greenwich (known as the Royal Greenwich Observatory or RGO when the working institution
         |moved from Greenwich to Herstmonceux after World War II) is an observatory situated on a hill in Greenwich Park,
@@ -84,7 +85,7 @@ class KmlReaderSpec extends FlatSpec with Matchers {
       """.stripMargin
     )
 
-    parsed.placemarks(1) should have(
+    parsed.waypoints(1) should have(
       'lat (53.23625),
       'lon (-2.307139),
       'elevation (None),

@@ -4,8 +4,7 @@ import java.io.InputStream
 import java.nio.charset.StandardCharsets
 import java.time.{ZoneOffset, ZonedDateTime}
 
-import com.pds.poi4s.gpx.GpxVersion._
-import com.pds.poi4s.model.Waypoint
+import com.pds.poi4s.model.{PoiFile, Waypoint}
 import org.apache.commons.io.IOUtils
 import org.scalatest.{FlatSpec, Matchers}
 
@@ -13,12 +12,12 @@ class GpxReaderSpec extends FlatSpec with Matchers {
 
   "GpxReader" should "parse a valid GPX 1.1 file" in {
     val parsed = parseAndCheckFile(getClass.getResourceAsStream("/gpx/1.1/observatories.gpx"))
-    parsed.version shouldBe Version11
+    parsed.version shouldBe Some("1.1")
   }
 
   it should "parse a valid GPX 1.0 file" in {
     val parsed = parseAndCheckFile(getClass.getResourceAsStream("/gpx/1.0/observatories.gpx"))
-    parsed.version shouldBe Version10
+    parsed.version shouldBe Some("1.0")
   }
 
   it should "reject an un-versioned GPX file" in {
@@ -61,13 +60,13 @@ class GpxReaderSpec extends FlatSpec with Matchers {
     e.getMessage shouldBe "Invalid GPX file"
   }
 
-  private def parseAndCheckFile(is: InputStream): GpxFile = {
+  private def parseAndCheckFile(is: InputStream): PoiFile = {
     val parsed = GpxReader.read(is)
 
-    parsed.creator shouldBe "Unit tests"
+    parsed.creator shouldBe Some("Unit tests")
     parsed.name shouldBe Some("Observatories")
-    parsed.created shouldBe Some(
-      ZonedDateTime.of(2016, 11, 13, 12, 31, 43, 827000000, ZoneOffset.UTC)
+    parsed.createdAt shouldBe Some(
+      ZonedDateTime.of(2016, 11, 13, 12, 31, 43, 827000000, ZoneOffset.UTC).toInstant
     )
 
     parsed.waypoints shouldBe Seq(

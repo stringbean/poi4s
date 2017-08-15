@@ -2,7 +2,7 @@ package com.pds.poi4s.kml
 
 import java.io.{ByteArrayOutputStream, StringReader}
 
-import com.pds.poi4s.model.Waypoint
+import com.pds.poi4s.model.{PoiFile, Waypoint}
 import org.scalatest.StreamlinedXmlEquality._
 import org.scalatest.{FlatSpec, Matchers}
 
@@ -11,8 +11,8 @@ import scala.xml.{Elem, XML}
 class KmlWriterSpec extends FlatSpec with Matchers {
 
   "KmlWriter" should "generate an empty KML file" in {
-    val kml = KmlFile(Nil, None, None)
-    val xml = generateFile(kml)
+    val poiFile = PoiFile()
+    val xml = generateFile(poiFile)
 
     val expected = <kml xmlns="http://www.opengis.net/kml/2.2">
       <Document/>
@@ -22,8 +22,8 @@ class KmlWriterSpec extends FlatSpec with Matchers {
   }
 
   it should "generate KML file with waypoints" in {
-    val kml = KmlFile(
-      Seq(
+    val kml = PoiFile(
+      waypoints = Seq(
         Waypoint(
           51.4994794d,
           -0.12480919999995876d,
@@ -36,9 +36,7 @@ class KmlWriterSpec extends FlatSpec with Matchers {
           -0.1375,
           name = Some("St James's Palace")
         )
-      ),
-      None,
-      None
+      )
     )
 
     val xml = generateFile(kml)
@@ -64,9 +62,9 @@ class KmlWriterSpec extends FlatSpec with Matchers {
   }
 
   it should "generate KML file with metadata" in {
-    val kml = KmlFile(Nil, Some("Test File"), Some("This is a test file"))
+    val poiFile = PoiFile(name = Some("Test File"), description = Some("This is a test file"))
 
-    val xml = generateFile(kml)
+    val xml = generateFile(poiFile)
     val expected =
       <kml xmlns="http://www.opengis.net/kml/2.2">
         <Document>
@@ -78,9 +76,9 @@ class KmlWriterSpec extends FlatSpec with Matchers {
     xml should ===(expected)
   }
 
-  private def generateFile(kmlFile: KmlFile): Elem = {
+  private def generateFile(poiFile: PoiFile): Elem = {
     val baos = new ByteArrayOutputStream()
-    KmlWriter.write(kmlFile, baos)
+    KmlWriter.write(poiFile, baos)
     XML.load(new StringReader(baos.toString("UTF-8")))
   }
 }

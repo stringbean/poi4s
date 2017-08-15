@@ -1,7 +1,7 @@
 package com.pds.poi4s.util
 
-import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
+import java.time.{Instant, ZonedDateTime}
 
 import scala.language.implicitConversions
 import scala.xml.NodeSeq
@@ -17,4 +17,5 @@ class NodeSeqHelpers(private val underlying: NodeSeq) {
   def doubleOption: Option[Double] = underlying.headOption.map(_.text.toDouble)
 
   def dateTimeOption: Option[ZonedDateTime] = textOption.map(ZonedDateTime.parse(_, dateTimeParser))
+  def instantOption: Option[Instant] = textOption.map(ZonedDateTime.parse(_, dateTimeParser).toInstant)
 }

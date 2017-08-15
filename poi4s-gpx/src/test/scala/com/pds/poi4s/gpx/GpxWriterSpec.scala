@@ -3,7 +3,7 @@ package com.pds.poi4s.gpx
 import java.io.{ByteArrayOutputStream, StringReader}
 
 import com.pds.poi4s.gpx.GpxVersion.{Version10, Version11}
-import com.pds.poi4s.model.Waypoint
+import com.pds.poi4s.model.{PoiFile, Waypoint}
 import org.scalatest.StreamlinedXmlEquality._
 import org.scalatest.{FlatSpec, Matchers}
 
@@ -12,9 +12,9 @@ import scala.xml.{Elem, XML}
 class GpxWriterSpec extends FlatSpec with Matchers {
 
   "GpxWriter" should "generate an empty GPX 1.1 file" in {
-    val gpx = GpxFile(Version11, "poi4s", Some("Empty GPX"), None, Nil)
+    val poiFile = PoiFile(name = Some("Empty GPX"), creator = Some("poi4s"))
 
-    val xml = generateFile(gpx, Version11)
+    val xml = generateFile(poiFile, Version11)
 
     val expected = <gpx version="1.1" creator="poi4s">
       <metadata>
@@ -26,12 +26,10 @@ class GpxWriterSpec extends FlatSpec with Matchers {
   }
 
   it should "generate GPX 1.1 file with waypoints" in {
-    val gpx = GpxFile(
-      Version11,
-      "poi4s",
-      Some("Waypoints GPX"),
-      None,
-      Seq(
+    val poiFile = PoiFile(
+      name = Some("Waypoints GPX"),
+      creator = Some("poi4s"),
+      waypoints = Seq(
         Waypoint(
           51.4994794d,
           -0.12480919999995876d,
@@ -45,7 +43,7 @@ class GpxWriterSpec extends FlatSpec with Matchers {
       )
     )
 
-    val xml = generateFile(gpx, Version11)
+    val xml = generateFile(poiFile, Version11)
     val expected = <gpx version="1.1" creator="poi4s">
       <metadata>
         <name>Waypoints GPX</name>
@@ -65,9 +63,9 @@ class GpxWriterSpec extends FlatSpec with Matchers {
   }
 
   it should "generate an empty GPX 1.0 file" in {
-    val gpx = GpxFile(Version10, "poi4s", Some("Empty GPX"), None, Nil)
+    val poiFile = PoiFile(name = Some("Empty GPX"), creator = Some("poi4s"))
 
-    val xml = generateFile(gpx, Version10)
+    val xml = generateFile(poiFile, Version10)
 
     val expected = <gpx version="1.0" creator="poi4s">
       <name>Empty GPX</name>
@@ -77,12 +75,10 @@ class GpxWriterSpec extends FlatSpec with Matchers {
   }
 
   it should "generate GPX 1.0 file with waypoints" in {
-    val gpx = GpxFile(
-      Version10,
-      "poi4s",
-      Some("Waypoints GPX"),
-      None,
-      Seq(
+    val poiFile = PoiFile(
+      name = Some("Waypoints GPX"),
+      creator = Some("poi4s"),
+      waypoints = Seq(
         Waypoint(
           51.4994794d,
           -0.12480919999995876d,
@@ -96,7 +92,7 @@ class GpxWriterSpec extends FlatSpec with Matchers {
       )
     )
 
-    val xml = generateFile(gpx, Version10)
+    val xml = generateFile(poiFile, Version10)
     val expected = <gpx version="1.0" creator="poi4s">
       <name>Waypoints GPX</name>
 
@@ -113,9 +109,9 @@ class GpxWriterSpec extends FlatSpec with Matchers {
     xml should ===(expected)
   }
 
-  private def generateFile(gpxFile: GpxFile, version: GpxVersion): Elem = {
+  private def generateFile(poiFile: PoiFile, version: GpxVersion): Elem = {
     val baos = new ByteArrayOutputStream()
-    GpxWriter.write(gpxFile, baos, version)
+    GpxWriter.write(poiFile, baos, version)
     XML.load(new StringReader(baos.toString("UTF-8")))
   }
 }
