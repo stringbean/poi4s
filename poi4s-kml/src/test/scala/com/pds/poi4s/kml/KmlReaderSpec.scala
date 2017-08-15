@@ -64,6 +64,9 @@ class KmlReaderSpec extends FlatSpec with Matchers {
   private def parseAndCheckFile(is: InputStream): KmlFile = {
     val parsed = KmlReader.read(is)
 
+    parsed.name shouldBe Some("Observatories")
+    parsed.description shouldBe Some("List of observatories")
+
     parsed.placemarks.head should have(
       'lat (51.4778),
       'lon (-0.001400),

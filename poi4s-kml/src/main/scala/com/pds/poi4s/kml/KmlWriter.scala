@@ -15,6 +15,8 @@ object KmlWriter {
   private def generateKml(kmlFile: KmlFile): Elem = {
     <kml xmlns="http://www.opengis.net/kml/2.2">
       <Document>
+        {kmlFile.name.map(n => <name>{n}</name>).orNull}
+        {kmlFile.description.map(d => <description>{d}</description>).orNull}
         {
           kmlFile.placemarks map { placemark =>
             <Placemark>

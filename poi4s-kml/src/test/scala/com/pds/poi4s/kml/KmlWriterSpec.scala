@@ -11,7 +11,7 @@ import scala.xml.{Elem, XML}
 class KmlWriterSpec extends FlatSpec with Matchers {
 
   "KmlWriter" should "generate an empty KML file" in {
-    val kml = KmlFile(Nil)
+    val kml = KmlFile(Nil, None, None)
     val xml = generateFile(kml)
 
     val expected = <kml xmlns="http://www.opengis.net/kml/2.2">
@@ -36,7 +36,9 @@ class KmlWriterSpec extends FlatSpec with Matchers {
           -0.1375,
           name = Some("St James's Palace")
         )
-      )
+      ),
+      None,
+      None
     )
 
     val xml = generateFile(kml)
@@ -57,6 +59,21 @@ class KmlWriterSpec extends FlatSpec with Matchers {
         </Placemark>
       </Document>
     </kml>
+
+    xml should ===(expected)
+  }
+
+  it should "generate KML file with metadata" in {
+    val kml = KmlFile(Nil, Some("Test File"), Some("This is a test file"))
+
+    val xml = generateFile(kml)
+    val expected =
+      <kml xmlns="http://www.opengis.net/kml/2.2">
+        <Document>
+          <name>Test File</name>
+          <description>This is a test file</description>
+        </Document>
+      </kml>
 
     xml should ===(expected)
   }
