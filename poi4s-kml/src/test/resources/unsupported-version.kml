@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/20.0">
+    <Document>
+        <Placemark>
+            <name>Royal Observatory, Greenwich</name>
+            <snippet/>
+            <description>
+                <![CDATA[<a href="https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich">Wikipedia Article</a>]]></description>
+            <Point>
+                <coordinates>-0.001400,51.477800,46.00</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Jodrell Bank</name>
+            <Point>
+                <coordinates>-2.307139,53.236250</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>

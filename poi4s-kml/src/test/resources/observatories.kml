@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+    <Document>
+        <name>Observatories</name>
+        <description>List of observatories</description>
+        <Placemark>
+            <name>Royal Observatory, Greenwich</name>
+            <snippet/>
+            <description>
+                <![CDATA[
+                The Royal Observatory, Greenwich (known as the Royal Greenwich Observatory or RGO when the working institution
+                moved from Greenwich to Herstmonceux after World War II) is an observatory situated on a hill in Greenwich Park,
+                overlooking the River Thames. It played a major role in the history of astronomy and navigation, and is best
+                known as the location of the prime meridian.<br/>
+                <a href="https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich">Wikipedia Article</a>
+                ]]></description>
+            <Point>
+                <coordinates>-0.001400,51.477800,46.00</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark>
+            <name>Jodrell Bank</name>
+            <Point>
+                <coordinates>-2.307139,53.236250</coordinates>
+            </Point>
+        </Placemark>
+    </Document>
+</kml>
