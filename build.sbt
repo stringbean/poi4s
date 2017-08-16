@@ -38,7 +38,7 @@ lazy val docsMappingsAPIDir = settingKey[String]("Name of subdirectory in site t
 
 lazy val docs = project
   .in(file("docs"))
-  .enablePlugins(MicrositesPlugin, ScalaUnidocPlugin)
+  .enablePlugins(MicrositesPlugin, ScalaUnidocPlugin, GhpagesPlugin)
   .settings(
     micrositeName := "poi4s",
     micrositeDescription := "GPS manipulation library for Scala",
@@ -50,6 +50,7 @@ lazy val docs = project
     micrositeDocumentationUrl := "docs",
     micrositeExtraMdFiles := Map(file("README.md") -> ExtraMdFileConfig("index.md", "home")),
     micrositeGitterChannel := false,
+    micrositePushSiteWith := GHPagesPlugin,
     docsMappingsAPIDir := "api",
     addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), docsMappingsAPIDir)
   )
