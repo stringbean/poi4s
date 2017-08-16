@@ -40,8 +40,11 @@ object SettingsPlugin extends AutoPlugin {
     autoAPIMappings := true,
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
     developers := List(
-      Developer("stringean", "Michael Stringer", "@the_stringbean", url("https://github.com/stringbean"))
+      Developer("stringbean", "Michael Stringer", "@the_stringbean", url("https://github.com/stringbean"))
     ),
+    organizationName := "Purple Dragon Software",
+    organizationHomepage := Some(url("https://purpledragon.software")),
+    homepage := Some(url("https://stringbean.github.io/poi4s")),
     scmInfo := Some(ScmInfo(url("https://github.com/stringbean/poi4s"), "https://github.com/stringbean/poi4s.git"))
   )
 }

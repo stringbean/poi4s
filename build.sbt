@@ -1,3 +1,5 @@
+import PgpKeys.{publishLocalSigned, publishSigned}
+
 organization := "software.purpledragon"
 
 version := "0.0.1"
@@ -21,6 +23,11 @@ lazy val root = project
   .aggregate(common, gpx, kml)
   .settings(
     publish := {},
-    publishLocal := {}
+    publishSigned := {},
+    publishLocal := {},
+    publishLocalSigned := {}
   )
   .enablePlugins(ScalaUnidocPlugin)
+
+useGpg := true
+usePgpKeyHex("B19D7A14F6F8B3BFA9FF655A5216B5A5F723A92D")
