@@ -31,11 +31,14 @@ lazy val root = project
       "-doc-root-content", baseDirectory.value + "/root-scaladoc.txt"
     )
   )
-  .enablePlugins(ScalaUnidocPlugin)
+
+
+lazy val docsMappingsAPIDir = settingKey[String]("Name of subdirectory in site target directory for api docs")
+
 
 lazy val docs = project
   .in(file("docs"))
-  .enablePlugins(MicrositesPlugin)
+  .enablePlugins(MicrositesPlugin, ScalaUnidocPlugin)
   .settings(
     micrositeName := "poi4s",
     micrositeDescription := "GPS manipulation library for Scala",
@@ -46,7 +49,9 @@ lazy val docs = project
     micrositeBaseUrl := "/poi4s",
     micrositeDocumentationUrl := "docs",
     micrositeExtraMdFiles := Map(file("README.md") -> ExtraMdFileConfig("index.md", "home")),
-    micrositeGitterChannel := false
+    micrositeGitterChannel := false,
+    docsMappingsAPIDir := "api",
+    addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), docsMappingsAPIDir)
   )
 
 useGpg := true

@@ -1,0 +1,5 @@
+options:
+  - title: Scaladoc
+    url: api/index.html
+    menu_type: docs
+    menu_section: api
