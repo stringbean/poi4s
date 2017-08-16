@@ -23,3 +23,4 @@ lazy val root = project
     publish := {},
     publishLocal := {}
   )
+  .enablePlugins(ScalaUnidocPlugin)

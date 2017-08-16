@@ -37,6 +37,7 @@ object SettingsPlugin extends AutoPlugin {
       "org.scalatest"           %% "scalatest"  % "3.0.3" % "test",
       "commons-io"              %  "commons-io" % "2.5"     % "test"
     ),
+    autoAPIMappings := true,
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
     developers := List(
       Developer("stringean", "Michael Stringer", "@the_stringbean", url("https://github.com/stringbean"))

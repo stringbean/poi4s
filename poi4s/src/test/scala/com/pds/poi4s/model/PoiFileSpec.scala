@@ -100,4 +100,21 @@ class PoiFileSpec extends FlatSpec with Matchers {
       'waypoints (Seq(waypoint))
     )
   }
+
+  "PoiFile ++ waypoint" should "return a new copy with the additional waypoints" in {
+    val waypoints = Seq(
+      Waypoint(1.0, 1.0),
+      Waypoint(1.0, -1.0)
+    )
+    val updated = poiFile ++ waypoints
+    updated should not be theSameInstanceAs(poiFile)
+
+    updated should have(
+      'name (None),
+      'description (None),
+      'creator (None),
+      'createdAt (None),
+      'waypoints (waypoints)
+    )
+  }
 }

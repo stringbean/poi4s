@@ -4,3 +4,5 @@ addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.3.1")
 addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.5.1")
 
 addSbtPlugin("org.foundweekends" % "sbt-bintray" % "0.5.1")
+
+addSbtPlugin("com.eed3si9n" % "sbt-unidoc" % "0.4.1")
