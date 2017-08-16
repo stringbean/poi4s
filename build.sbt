@@ -1,4 +1,4 @@
-organization := "com.pds"
+organization := "software.purpledragon"
 
 version := "0.0.1"
 
