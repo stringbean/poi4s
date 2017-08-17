@@ -1,5 +1,5 @@
 import PgpKeys.{publishLocalSigned, publishSigned}
-import microsites.ExtraMdFileConfig
+import microsites.{ExtraMdFileConfig,MicrositeFavicon}
 
 organization := "software.purpledragon"
 
@@ -60,6 +60,15 @@ lazy val docs = project
       "gray-light"        -> "#bdc3c7",
       "gray-lighter"      -> "#ecf0f1",
       "white-color"       -> "#FFFFFF"
+    ),
+    micrositeFavicons := Seq(
+      MicrositeFavicon("favicon16.png", "16x16"),
+      MicrositeFavicon("favicon24.png", "24x24"),
+      MicrositeFavicon("favicon32.png", "32x32"),
+      MicrositeFavicon("favicon64.png", "64x64"),
+      MicrositeFavicon("favicon96.png", "96x96"),
+      MicrositeFavicon("favicon128.png", "128x128"),
+      MicrositeFavicon("favicon512.png", "512x512")
     ),
     docsMappingsAPIDir := "api",
     addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), docsMappingsAPIDir)
