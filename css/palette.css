@@ -1,32 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 .technologies {
-  background: #1C2C52; }
+  background: #34495e; }
 
 #site-header .navbar-wrapper a {
   color: #fff; }
 
 #site-footer {
-  background: #162341; }
+  background: #2c3e50; }
 
 ::-moz-selection {
-  background: #02B4E5;
+  background: #d35400;
   color: #FFFFFF; }
 
 ::selection {
-  background: #02B4E5;
+  background: #d35400;
   color: #FFFFFF; }
 
 .jumbotron {
-  background-color: #1C2C52; }
+  background-color: #34495e; }
   .jumbotron .btn-outline-inverse {
     border: 2px solid #FFFFFF;
     color: #FFFFFF; }
     .jumbotron .btn-outline-inverse:hover, .jumbotron .btn-outline-inverse:focus {
       background: #FFFFFF;
-      color: #1C2C52; }
+      color: #34495e; }
 
 pre {
-  background: rgba(244, 243, 244, 0.6); }
+  background: rgba(236, 240, 241, 0.6); }
   pre code {
     color: inherit;
     background-color: transparent; }
@@ -34,28 +34,28 @@ pre {
     background: none; }
 
 body.docs {
-  background: #F4F3F4; }
+  background: #ecf0f1; }
 
 #content code {
-  color: #837F84;
-  background-color: #F4F3F4; }
+  color: #7f8c8d;
+  background-color: #ecf0f1; }
 
 #sidebar-wrapper {
-  background: #1C2C52; }
+  background: #34495e; }
 
 #page-content-wrapper .nav a {
-  color: #837F84; }
+  color: #7f8c8d; }
   #page-content-wrapper .nav a:hover {
-    color: #453E46; }
+    color: #667374; }
   #page-content-wrapper .nav a i {
     font-size: 18px; }
 
 .sidebar-nav > li a:hover {
-  background: #162341; }
+  background: #2c3e50; }
 .sidebar-nav > li a.active {
-  border-left: 3px solid #02B4E5;
+  border-left: 3px solid #d35400;
   color: #fff; }
 .sidebar-nav > .sidebar-brand a {
-  background: #162341; }
+  background: #2c3e50; }
   .sidebar-nav > .sidebar-brand a:hover {
-    background: #162341; }
+    background: #2c3e50; }
