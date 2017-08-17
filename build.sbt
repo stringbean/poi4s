@@ -51,6 +51,16 @@ lazy val docs = project
     micrositeExtraMdFiles := Map(file("README.md") -> ExtraMdFileConfig("index.md", "home")),
     micrositeGitterChannel := false,
     micrositePushSiteWith := GHPagesPlugin,
+    micrositePalette := Map(
+      "brand-primary"     -> "#d35400",
+      "brand-secondary"   -> "#34495e",
+      "brand-tertiary"    -> "#2c3e50",
+      "gray-dark"         -> "#667374",
+      "gray"              -> "#7f8c8d",
+      "gray-light"        -> "#bdc3c7",
+      "gray-lighter"      -> "#ecf0f1",
+      "white-color"       -> "#FFFFFF"
+    ),
     docsMappingsAPIDir := "api",
     addMappingsToSiteDir(mappings in (ScalaUnidoc, packageDoc), docsMappingsAPIDir)
   )
