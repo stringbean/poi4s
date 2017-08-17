@@ -38,6 +38,9 @@ object SettingsPlugin extends AutoPlugin {
       "commons-io"              %  "commons-io" % "2.5"     % "test"
     ),
     autoAPIMappings := true,
+    apiMappings +=
+      file("/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar") ->
+        url("http://docs.oracle.com/javase/8/docs/api"),
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
     developers := List(
       Developer("stringbean", "Michael Stringer", "@the_stringbean", url("https://github.com/stringbean"))

@@ -5,6 +5,7 @@ import java.time.Instant
 /**
   * Representation of a file containing GPS data, such as [[Waypoint]]s or POI.
   *
+  * @since 0.0.1
   * @param name Name of the file.
   * @param description Description of the file.
   * @param creator Software or device that created the file.

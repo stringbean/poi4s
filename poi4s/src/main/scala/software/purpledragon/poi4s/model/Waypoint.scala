@@ -2,6 +2,7 @@ package software.purpledragon.poi4s.model
 
 /** Representation of a waypoint on a GPS track.
   *
+  * @since 0.0.1
   * @param lat Latitude of this waypoint in decimal degrees.
   * @param lon Logitude of this waypoint in decimal degrees.
   * @param elevation Elevation of this waypoint in metres.
