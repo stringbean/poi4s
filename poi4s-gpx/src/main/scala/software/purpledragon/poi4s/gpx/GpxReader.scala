@@ -47,7 +47,7 @@ object GpxReader {
       name = name,
       creator = Some(creator),
       createdAt = created,
-      version = Some("1.0"),
+      version = Some(GpxVersion.Version10),
       waypoints = waypoints
     )
   }
@@ -63,7 +63,7 @@ object GpxReader {
       name = name,
       creator = Some(creator),
       createdAt = created,
-      version = Some("1.1"),
+      version = Some(GpxVersion.Version11),
       waypoints = waypoints
     )
   }

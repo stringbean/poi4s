@@ -12,12 +12,12 @@ class GpxReaderSpec extends FlatSpec with Matchers {
 
   "GpxReader" should "parse a valid GPX 1.1 file" in {
     val parsed = parseAndCheckFile(getClass.getResourceAsStream("/gpx/1.1/observatories.gpx"))
-    parsed.version shouldBe Some("1.1")
+    parsed.version shouldBe Some(GpxVersion.Version11)
   }
 
   it should "parse a valid GPX 1.0 file" in {
     val parsed = parseAndCheckFile(getClass.getResourceAsStream("/gpx/1.0/observatories.gpx"))
-    parsed.version shouldBe Some("1.0")
+    parsed.version shouldBe Some(GpxVersion.Version10)
   }
 
   it should "reject an un-versioned GPX file" in {
