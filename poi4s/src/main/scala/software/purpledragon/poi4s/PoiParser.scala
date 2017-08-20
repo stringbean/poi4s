@@ -25,7 +25,7 @@ trait PoiParser[V <: FileVersion] {
     * @throws exception.PoiWriteException if an error occurs while writing the file.
     */
   @throws[PoiWriteException]
-  def writeFile(os: OutputStream): Unit
+  def writeFile(poiFile: PoiFile, os: OutputStream): Unit
 
   /** Writes GPS data to the supplied [[java.io.OutputStream]].
     *
@@ -34,5 +34,5 @@ trait PoiParser[V <: FileVersion] {
     * @throws exception.PoiWriteException if an error occurs while writing the file.
     */
   @throws[PoiWriteException]
-  def writeFile(os: OutputStream, version: V): Unit
+  def writeFile(poiFile: PoiFile, os: OutputStream, version: V): Unit
 }
