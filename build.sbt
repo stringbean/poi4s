@@ -25,7 +25,10 @@ lazy val root = project
     publish := {},
     publishSigned := {},
     publishLocal := {},
-    publishLocalSigned := {}
+    publishLocalSigned := {},
+    scalacOptions in Compile in doc ++= Seq(
+      "-doc-root-content", baseDirectory.value + "/root-scaladoc.txt"
+    )
   )
   .enablePlugins(ScalaUnidocPlugin)
 

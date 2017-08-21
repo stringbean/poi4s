@@ -1,0 +1,8 @@
+This is the documentation for the [[https://stringbean.github.io/poi4s poi4s]] project.
+
+The main [[software.purpledragon.poi4s poi4s package]] contains the main model & abstractions of different GPS
+file formats. This is contained in the `poi4s` dependency.
+
+The following file formats are supported:
+  - [[https://en.wikipedia.org/wiki/GPS_Exchange_Format GPX files]] in [[software.purpledragon.poi4s.gpx `poi4s-gpx`]]
+  - [[https://en.wikipedia.org/wiki/Keyhole_Markup_Language KML files]] in [[software.purpledragon.poi4s.kml `poi4s-kml`]]
