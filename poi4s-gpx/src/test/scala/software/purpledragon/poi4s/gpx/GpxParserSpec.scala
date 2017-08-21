@@ -5,13 +5,14 @@ import java.nio.charset.StandardCharsets
 import java.time.{ZoneOffset, ZonedDateTime}
 
 import org.apache.commons.io.IOUtils
+import org.scalatest.xml.XmlMatchers
 import org.scalatest.{FlatSpec, Matchers}
 import software.purpledragon.poi4s.gpx.GpxVersion.{Version10, Version11}
 import software.purpledragon.poi4s.model.{PoiFile, Waypoint}
 
 import scala.xml.{Elem, XML}
 
-class GpxParserSpec extends FlatSpec with Matchers {
+class GpxParserSpec extends FlatSpec with Matchers with XmlMatchers {
   val parser = new GpxParser()
 
   "GpxParser.parseFile" should "parse a valid GPX 1.1 file" in {
@@ -75,7 +76,7 @@ class GpxParserSpec extends FlatSpec with Matchers {
       </metadata>
     </gpx>
 
-    xml should ===(expected)
+    xml should beXml(expected, ignoreWhitespace = true)
   }
 
   it should "generate GPX 1.1 file with waypoints" in {
@@ -112,7 +113,7 @@ class GpxParserSpec extends FlatSpec with Matchers {
       </wpt>
     </gpx>
 
-    xml should ===(expected)
+    xml should beXml(expected, ignoreWhitespace = true)
   }
 
   it should "generate an empty GPX 1.0 file" in {
@@ -124,7 +125,7 @@ class GpxParserSpec extends FlatSpec with Matchers {
       <name>Empty GPX</name>
     </gpx>
 
-    xml should ===(expected)
+    xml should beXml(expected, ignoreWhitespace = true)
   }
 
   it should "generate GPX 1.0 file with waypoints" in {
@@ -159,7 +160,7 @@ class GpxParserSpec extends FlatSpec with Matchers {
       </wpt>
     </gpx>
 
-    xml should ===(expected)
+    xml should beXml(expected, ignoreWhitespace = true)
   }
 
   private def generateFile(poiFile: PoiFile, version: GpxVersion): Elem = {
