@@ -1,14 +1,16 @@
 package software.purpledragon.poi4s.kml
 
+import software.purpledragon.poi4s.exception.PoiParseException
 import software.purpledragon.poi4s.model.Waypoint
 import software.purpledragon.poi4s.util.XmlUtils._
 
 import scala.xml.Node
 
-object Placemark {
+private[kml] object Placemark {
   private val Coordinates = "(\\-?[0-9]+\\.[0-9]+), *(\\-?[0-9]+\\.[0-9]+)".r
   private val CoordinatesWithElevation = "(\\-?[0-9]+\\.[0-9]+), *(\\-?[0-9]+\\.[0-9]+), *(\\-?[0-9]+\\.[0-9]+)".r
 
+  @throws[PoiParseException]
   def parseCoordinates(in: String): (Double, Double, Option[Double]) = {
     in match {
       case Coordinates(lon, lat) =>
@@ -18,11 +20,12 @@ object Placemark {
         (lat.toDouble, lon.toDouble, Some(elevation.toDouble))
 
       case _ =>
-        throw new KmlParseException(s"Invalid coordinate [$in]")
+        throw new PoiParseException(s"Invalid coordinate [$in]")
     }
   }
 
-  private[kml] def parseVersion22(node: Node): Waypoint = {
+  @throws[PoiParseException]
+  def parseVersion22(node: Node): Waypoint = {
     val coordinate = parseCoordinates((node \ "Point" \ "coordinates").text)
     Waypoint(
       coordinate._1,
