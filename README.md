@@ -1,7 +1,7 @@
 # poi4s - Scala library for parsing and converting GPS files
 
-[![Build Status](https://img.shields.io/travis/stringbean/poi4s.svg)](https://travis-ci.org/stringbean/poi4s)
-[![Test Coverage](https://img.shields.io/codecov/c/github/stringbean/poi4s.svg)](https://codecov.io/gh/stringbean/poi4s)
+[![Build Status](https://img.shields.io/travis/stringbean/poi4s/master.svg)](https://travis-ci.org/stringbean/poi4s)
+[![Test Coverage](https://img.shields.io/codecov/c/github/stringbean/poi4s/master.svg)](https://codecov.io/gh/stringbean/poi4s)
 [![Maven Central - Scala 2.11](https://img.shields.io/maven-central/v/software.purpledragon/poi4s_2.11.svg?label=scala%202.11)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22poi4s_2.11%22)
 [![Maven Central - Scala 2.12](https://img.shields.io/maven-central/v/software.purpledragon/poi4s_2.12.svg?label=scala%202.12)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22poi4s_2.12%22)
 
