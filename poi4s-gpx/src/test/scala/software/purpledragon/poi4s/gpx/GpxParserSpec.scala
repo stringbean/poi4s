@@ -7,6 +7,7 @@ import java.time.{ZoneOffset, ZonedDateTime}
 import org.apache.commons.io.IOUtils
 import org.scalatest.xml.XmlMatchers
 import org.scalatest.{FlatSpec, Matchers}
+import software.purpledragon.poi4s.exception.PoiParseException
 import software.purpledragon.poi4s.gpx.GpxVersion.{Version10, Version11}
 import software.purpledragon.poi4s.model.{PoiFile, Waypoint}
 
@@ -26,40 +27,40 @@ class GpxParserSpec extends FlatSpec with Matchers with XmlMatchers {
   }
 
   it should "reject an un-versioned GPX file" in {
-    val e = the[GpxParseException] thrownBy {
-      GpxReader.read(getClass.getResourceAsStream("/gpx/missing-version.gpx"))
+    val e = the[PoiParseException] thrownBy {
+      parser.parseFile(getClass.getResourceAsStream("/gpx/missing-version.gpx"))
     }
 
     e.getMessage shouldBe "Missing GPX version"
   }
 
   it should "reject an unsupported version GPX file" in {
-    val e = the[GpxParseException] thrownBy {
-      GpxReader.read(getClass.getResourceAsStream("/gpx/unsupported-version.gpx"))
+    val e = the[PoiParseException] thrownBy {
+      parser.parseFile(getClass.getResourceAsStream("/gpx/unsupported-version.gpx"))
     }
 
     e.getMessage shouldBe "Unsupported GPX version 2.0"
   }
 
   it should "reject non-XML file" in {
-    val e = the[GpxParseException] thrownBy {
-      GpxReader.read(IOUtils.toInputStream("Not XML", StandardCharsets.UTF_8))
+    val e = the[PoiParseException] thrownBy {
+      parser.parseFile(IOUtils.toInputStream("Not XML", StandardCharsets.UTF_8))
     }
 
     e.getMessage shouldBe "Invalid GPX file"
   }
 
   it should "reject broken XML file" in {
-    val e = the[GpxParseException] thrownBy {
-      GpxReader.read(IOUtils.toInputStream("<gpx>incorrect termination</foo>", StandardCharsets.UTF_8))
+    val e = the[PoiParseException] thrownBy {
+      parser.parseFile(IOUtils.toInputStream("<gpx>incorrect termination</foo>", StandardCharsets.UTF_8))
     }
 
     e.getMessage shouldBe "Invalid GPX file"
   }
 
   it should "reject non-GPX XML file" in {
-    val e = the[GpxParseException] thrownBy {
-      GpxReader.read(IOUtils.toInputStream("<wrong>xml</wrong>", StandardCharsets.UTF_8))
+    val e = the[PoiParseException] thrownBy {
+      parser.parseFile(IOUtils.toInputStream("<wrong>xml</wrong>", StandardCharsets.UTF_8))
     }
 
     e.getMessage shouldBe "Invalid GPX file"

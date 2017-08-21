@@ -5,8 +5,8 @@ import software.purpledragon.poi4s.util.XmlUtils._
 
 import scala.xml.Node
 
-object GpxWaypoint {
-  private[gpx] def parseVersion10(node: Node): Waypoint = {
+private[gpx] object GpxWaypoint {
+  def parseVersion10(node: Node): Waypoint = {
     Waypoint(
       (node \@ "lat").toDouble,
       (node \@ "lon").toDouble,
@@ -19,7 +19,7 @@ object GpxWaypoint {
     )
   }
 
-  private[gpx] def parseVersion11(node: Node): Waypoint = {
+  def parseVersion11(node: Node): Waypoint = {
     Waypoint(
       (node \@ "lat").toDouble,
       (node \@ "lon").toDouble,
