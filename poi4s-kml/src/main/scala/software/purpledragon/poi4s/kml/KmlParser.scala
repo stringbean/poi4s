@@ -11,6 +11,8 @@ import software.purpledragon.poi4s.util.XmlUtils._
 
 import KmlVersion._
 
+/** Parse/writer for KML files. Supports KML 2.2.
+  */
 class KmlParser extends PoiParser[KmlVersion] {
   private val KmlNamespace = "http://www.opengis.net/kml/([0-9]+.[0-9]+)".r
   private val prettyPrinter = new PrettyPrinter(80, 4)

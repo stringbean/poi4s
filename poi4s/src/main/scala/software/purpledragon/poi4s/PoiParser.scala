@@ -3,7 +3,7 @@ package software.purpledragon.poi4s
 import java.io.{InputStream, OutputStream}
 
 import software.purpledragon.poi4s.exception.{PoiParseException, PoiWriteException}
-import software.purpledragon.poi4s.model.{FileVersion, PoiFile}
+import software.purpledragon.poi4s.model.PoiFile
 
 /** Representation of a GPS file type. Provides interfaces for reading and write files of the given type.
   *

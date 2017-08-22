@@ -2,6 +2,8 @@ package software.purpledragon.poi4s.model
 
 import java.time.Instant
 
+import software.purpledragon.poi4s.FileVersion
+
 /**
   * Representation of a file containing GPS data, such as [[Waypoint]]s or POI.
   *

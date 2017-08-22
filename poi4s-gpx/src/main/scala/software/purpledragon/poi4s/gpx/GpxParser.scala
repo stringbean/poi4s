@@ -10,6 +10,8 @@ import software.purpledragon.poi4s.util.XmlUtils._
 
 import scala.xml.{Elem, PrettyPrinter, SAXException, XML}
 
+/** Parse/writer for GPX files. Supports GPX 1.0 & 1.1.
+  */
 class GpxParser extends PoiParser[GpxVersion] {
   private val prettyPrinter = new PrettyPrinter(80, 4)
 
