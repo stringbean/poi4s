@@ -3,6 +3,8 @@ import sbt.Keys._
 import sbt.plugins.JvmPlugin
 import de.heikoseeberger.sbtheader.HeaderPlugin
 import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport._
+import sbtunidoc.BaseUnidocPlugin.autoImport._
+import sbtunidoc.ScalaUnidocPlugin.autoImport._
 
 object SettingsPlugin extends AutoPlugin {
   override def trigger: PluginTrigger = AllRequirements
@@ -32,6 +34,7 @@ object SettingsPlugin extends AutoPlugin {
       "-deprecation",
       "-feature",
       "-unchecked"),
+    scalacOptions in (ScalaUnidoc, unidoc) ++= Seq("-diagrams", "-diagrams-debug"),
     initialize := {
       if (sys.props("java.specification.version") != "1.8")
         sys.error("Java 8 is required for this project.")
