@@ -26,6 +26,7 @@ import software.purpledragon.poi4s.model.PoiFile
   * @since 0.0.2
   */
 trait PoiParser[V <: FileVersion] {
+
   /** Parses a GPS data from the supplied [[java.io.InputStream]] into a [[model.PoiFile]].
     *
     * @param is the stream to read from.

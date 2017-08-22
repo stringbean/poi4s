@@ -1,3 +1,4 @@
+import com.lucidchart.sbt.scalafmt.ScalafmtCorePlugin.autoImport._
 import sbt._
 import sbt.Keys._
 import sbt.plugins.JvmPlugin
@@ -40,9 +41,10 @@ object SettingsPlugin extends AutoPlugin {
         sys.error("Java 8 is required for this project.")
     },
     libraryDependencies ++= Seq(
-      "org.scalatest"           %% "scalatest"  % "3.0.3" % "test",
+      "org.scalatest"           %% "scalatest"  % "3.0.4"   % "test",
       "commons-io"              %  "commons-io" % "2.5"     % "test"
     ),
+    scalafmtVersion := "1.2.0",
     autoAPIMappings := true,
     apiMappings +=
       file("/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar") ->

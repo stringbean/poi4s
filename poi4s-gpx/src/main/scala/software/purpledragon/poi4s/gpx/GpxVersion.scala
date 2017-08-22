@@ -26,6 +26,7 @@ sealed abstract class GpxVersion(override val entryName: String) extends EnumEnt
 /** Supported versions of GPX files.
   */
 object GpxVersion {
+
   /** GPX Version 1.0 */
   case object Version10 extends GpxVersion("1.0")
 
