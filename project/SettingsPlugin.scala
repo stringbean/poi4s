@@ -1,10 +1,12 @@
 import sbt._
 import sbt.Keys._
 import sbt.plugins.JvmPlugin
+import de.heikoseeberger.sbtheader.HeaderPlugin
+import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport._
 
 object SettingsPlugin extends AutoPlugin {
   override def trigger: PluginTrigger = AllRequirements
-  override def requires: Plugins = JvmPlugin
+  override def requires: Plugins = JvmPlugin && HeaderPlugin
 
   object autoImport {
     val scalaXml = Seq(
@@ -42,6 +44,7 @@ object SettingsPlugin extends AutoPlugin {
     apiMappings +=
       file("/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar") ->
         url("http://docs.oracle.com/javase/8/docs/api"),
+    headerLicense := Some(HeaderLicense.ALv2("2017", "Michael Stringer")),
     licenses += ("Apache-2.0", url("https://opensource.org/licenses/Apache-2.0")),
     developers := List(
       Developer("stringbean", "Michael Stringer", "@the_stringbean", url("https://github.com/stringbean"))
