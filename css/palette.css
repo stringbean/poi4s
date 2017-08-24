@@ -9,11 +9,11 @@
   background: #2c3e50; }
 
 ::-moz-selection {
-  background: #d35400;
+  background: #337ab7;
   color: #FFFFFF; }
 
 ::selection {
-  background: #d35400;
+  background: #337ab7;
   color: #FFFFFF; }
 
 .jumbotron {
@@ -46,14 +46,14 @@ body.docs {
 #page-content-wrapper .nav a {
   color: #7f8c8d; }
   #page-content-wrapper .nav a:hover {
-    color: #667374; }
+    color: #495454; }
   #page-content-wrapper .nav a i {
     font-size: 18px; }
 
 .sidebar-nav > li a:hover {
   background: #2c3e50; }
 .sidebar-nav > li a.active {
-  border-left: 3px solid #d35400;
+  border-left: 3px solid #337ab7;
   color: #fff; }
 .sidebar-nav > .sidebar-brand a {
   background: #2c3e50; }
