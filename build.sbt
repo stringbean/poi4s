@@ -52,15 +52,16 @@ lazy val docs = project
     micrositeGitterChannel := false,
     micrositePushSiteWith := GHPagesPlugin,
     micrositePalette := Map(
-      "brand-primary"     -> "#d35400",
+      "brand-primary"     -> "#337ab7",
       "brand-secondary"   -> "#34495e",
       "brand-tertiary"    -> "#2c3e50",
-      "gray-dark"         -> "#667374",
+      "gray-dark"         -> "#495454",
       "gray"              -> "#7f8c8d",
       "gray-light"        -> "#bdc3c7",
       "gray-lighter"      -> "#ecf0f1",
       "white-color"       -> "#FFFFFF"
     ),
+    micrositeHighlightTheme := "atom-one-light",
     micrositeFavicons := Seq(
       MicrositeFavicon("favicon16.png", "16x16"),
       MicrositeFavicon("favicon24.png", "24x24"),

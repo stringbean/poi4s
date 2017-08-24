@@ -1,3 +1,7 @@
+#content code {
+  background: #fafafa;
+}
+
 .jumbotron {
     background-color: #34495e;
     /* tiling SVG from http://www.heropatterns.com/ */
