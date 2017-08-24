@@ -35,7 +35,10 @@ object SettingsPlugin extends AutoPlugin {
       "-deprecation",
       "-feature",
       "-unchecked"),
-    scalacOptions in (ScalaUnidoc, unidoc) ++= Seq("-diagrams", "-diagrams-debug"),
+    scalacOptions in (ScalaUnidoc, unidoc) ++= Seq(
+      "-diagrams",
+      "-doc-root-content", (baseDirectory in LocalRootProject).value + "/root-scaladoc.txt"
+    ),
     initialize := {
       if (sys.props("java.specification.version") != "1.8")
         sys.error("Java 8 is required for this project.")
