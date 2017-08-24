@@ -13,8 +13,8 @@ object SettingsPlugin extends AutoPlugin {
 
   object autoImport {
     val scalaXml = Seq(
-      "org.scala-lang.modules"  %% "scala-xml"      % "1.0.6",
-      "com.github.andyglow"     %% "scala-xml-diff" % "2.0.3-SNAPSHOT"  % "test"
+      "org.scala-lang.modules"    %% "scala-xml"      % "1.0.6",
+      "software.purpledragon.xml" %% "xml-scalatest"  % "0.0.2" % "test"
     )
     val enumeratum = Seq(
       "com.beachape"            %% "enumeratum" % "1.5.12"

@@ -6,9 +6,9 @@ import java.nio.charset.StandardCharsets
 import org.apache.commons.io.IOUtils
 import org.scalatest.matchers.{MatchResult, Matcher}
 import org.scalatest.{FlatSpec, Matchers}
-import org.scalatest.xml.XmlMatchers
 import software.purpledragon.poi4s.exception.PoiParseException
 import software.purpledragon.poi4s.model.{PoiFile, Waypoint}
+import software.purpledragon.xml.scalatest.XmlMatchers
 
 import scala.xml.{Elem, XML}
 
@@ -76,7 +76,7 @@ class KmlParserSpec extends FlatSpec with Matchers with XmlMatchers {
       <Document/>
     </kml>
 
-    xml should beXml(expected, ignoreWhitespace = true)
+    xml should beXml(expected)
   }
 
   it should "generate KML file with waypoints" in {
@@ -116,7 +116,7 @@ class KmlParserSpec extends FlatSpec with Matchers with XmlMatchers {
       </Document>
     </kml>
 
-    xml should beXml(expected, ignoreWhitespace = true)
+    xml should beXml(expected)
   }
 
   it should "generate KML file with metadata" in {
@@ -131,7 +131,7 @@ class KmlParserSpec extends FlatSpec with Matchers with XmlMatchers {
         </Document>
       </kml>
 
-    xml should beXml(expected, ignoreWhitespace = true)
+    xml should beXml(expected)
   }
 
   private def parseAndCheckFile(is: InputStream): PoiFile = {
