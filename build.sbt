@@ -32,9 +32,7 @@ lazy val root = project
     )
   )
 
-
 lazy val docsMappingsAPIDir = settingKey[String]("Name of subdirectory in site target directory for api docs")
-
 
 lazy val docs = project
   .in(file("docs"))
@@ -56,7 +54,7 @@ lazy val docs = project
       "brand-secondary"   -> "#34495e",
       "brand-tertiary"    -> "#2c3e50",
       "gray-dark"         -> "#495454",
-      "gray"              -> "#7f8c8d",
+      "gray"              -> "#6c7677",
       "gray-light"        -> "#bdc3c7",
       "gray-lighter"      -> "#ecf0f1",
       "white-color"       -> "#FFFFFF"

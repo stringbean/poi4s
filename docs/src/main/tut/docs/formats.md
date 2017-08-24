@@ -21,6 +21,7 @@ On the TODO list:
 
 * Parser: `software.purpledragon.poi4s.gpx.GpxParser`
 * Artifact: `poi4s-gpx`
+* Dependencies: `scala-xml`
 * Format Documentation:
   * [Official Site](http://www.topografix.com/gpx.asp)
   * [Wikipedia](https://en.wikipedia.org/wiki/GPS_Exchange_Format)
@@ -29,6 +30,7 @@ On the TODO list:
 
 * Parser: `software.purpledragon.poi4s.kml.KmlParser`
 * Artifact: `poi4s-kml`
+* Dependencies: `scala-xml`
 * Format Documentation:
   * [KML Standard](http://www.opengeospatial.org/standards/kml/)
   * [Google KML Docs](https://developers.google.com/kml/documentation/)
