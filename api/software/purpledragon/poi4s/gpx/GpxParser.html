@@ -19,7 +19,7 @@
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
         var toRoot = '../../../../';
@@ -125,10 +125,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a></dd></dl></div>
-    </li><li name="software.purpledragon.poi4s.kml" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="kml"></a><a id="kml:kml"></a>
+    </li><li name="software.purpledragon.poi4s.gpx" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="gpx"></a><a id="gpx:gpx"></a>
       <span class="permalink">
-      <a href="../../../software/purpledragon/poi4s/index.html#kml" title="Permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#gpx" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -138,46 +138,40 @@
       </span>
       <span class="symbol">
         <a title="" href="index.html">
-              <span class="name">kml</span>
+              <span class="name">gpx</span>
             </a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="KmlParseException.html" title=""></a>
-                        <a href="KmlParseException.html" title="">
-                          KmlParseException
+                        <a class="object" href="Gpx$.html" title=""></a>
+                        <a href="Gpx$.html" title="">
+                          Gpx
                         </a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="" title=""></a>
-                        <a href="" title="">
-                          KmlReader
+                        <a class="class" href="" title="Parse/writer for GPX files."></a>
+                        <a href="" title="Parse/writer for GPX files.">
+                          GpxParser
                         </a>
                       </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="KmlWriter$.html" title=""></a>
-                        <a href="KmlWriter$.html" title="">
-                          KmlWriter
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="Placemark$.html" title=""></a>
-                        <a href="Placemark$.html" title="">
-                          Placemark
+                        <a class="object" href="GpxVersion$.html" title="Supported versions of GPX files."></a>
+                        <a class="class" href="GpxVersion.html" title="Representation of a supported version of GPX files."></a>
+                        <a href="GpxVersion.html" title="Representation of a supported version of GPX files.">
+                          GpxVersion
                         </a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="object value">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle object">o</div>
-        <p id="owner"><a href="../../../index.html" class="extype" name="software">software</a>.<a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a>.<a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a>.<a href="index.html" class="extype" name="software.purpledragon.poi4s.kml">kml</a></p>
-        <h1>KmlReader<span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html" title="Permalink">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="software">software</a>.<a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a>.<a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a>.<a href="index.html" class="extype" name="software.purpledragon.poi4s.gpx">gpx</a></p>
+        <h1>GpxParser<span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -187,20 +181,31 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">KmlReader</span>
+        <span class="name">GpxParser</span><span class="result"> extends <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a>[<a href="GpxVersion.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion">GpxVersion</a>]</span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Parse/writer for GPX files. Supports GPX 1.0 &amp; 1.1.
+</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a>[<a href="GpxVersion.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion">GpxVersion</a>], <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 138.00 118.00" height="118pt" width="138pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 134,-114 134,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="software.purpledragon.poi4s.gpx.GpxParser (this class)" xlink:href="#inheritance-diagram"><path d="M97.1667,-49C97.1667,-49 32.8333,-49 32.8333,-49 28.6667,-49 24.5,-44.8333 24.5,-40.6667 24.5,-40.6667 24.5,-32.3333 24.5,-32.3333 24.5,-28.1667 28.6667,-24 32.8333,-24 32.8333,-24 97.1667,-24 97.1667,-24 101.3333,-24 105.5,-28.1667 105.5,-32.3333 105.5,-32.3333 105.5,-40.6667 105.5,-40.6667 105.5,-44.8333 101.3333,-49 97.1667,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../lib/class_diagram.png" y="-43.5" x="35" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-33.6" x="55.7715" text-anchor="start">GpxParser</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="software.purpledragon.poi4s.PoiParser" xlink:href="../PoiParser.html#inheritance-diagram"><path d="M118.6667,-110C118.6667,-110 11.3333,-110 11.3333,-110 7.1667,-110 3,-105.8333 3,-101.6667 3,-101.6667 3,-93.3333 3,-93.3333 3,-89.1667 7.1667,-85 11.3333,-85 11.3333,-85 118.6667,-85 118.6667,-85 122.8333,-85 127,-89.1667 127,-93.3333 127,-93.3333 127,-101.6667 127,-101.6667 127,-105.8333 122.8333,-110 118.6667,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../../lib/trait_diagram.png" y="-104.5" x="13" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-94.6" x="33.9238" text-anchor="start">PoiParser[GpxVersion]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="GpxParser is a subtype of PoiParser[GpxVersion]"><path d="M65,-77.7386C65,-68.3393 65,-57.3803 65,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="62.5501,-77.8607 65,-84.8608 67.4501,-77.8608 62.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -225,7 +230,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="software.purpledragon.poi4s.kml.KmlReader"><span>KmlReader</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="software.purpledragon.poi4s.gpx.GpxParser"><span>GpxParser</span></li><li class="in" name="software.purpledragon.poi4s.PoiParser"><span>PoiParser</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -243,7 +248,26 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="software.purpledragon.poi4s.gpx.GpxParser#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():software.purpledragon.poi4s.gpx.GpxParser"></a><a id="&lt;init&gt;:GpxParser"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#&lt;init&gt;():software.purpledragon.poi4s.gpx.GpxParser" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GpxParser</span><span class="params">()</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         
 
@@ -255,7 +279,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -271,7 +295,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html###():Int" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -287,7 +311,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -303,7 +327,7 @@
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -319,7 +343,7 @@
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#clone():Object" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -341,7 +365,7 @@
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -357,7 +381,7 @@
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -373,7 +397,7 @@
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#finalize():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -395,7 +419,7 @@
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -411,7 +435,7 @@
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#hashCode():Int" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -427,7 +451,7 @@
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -443,7 +467,7 @@
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -459,7 +483,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#notify():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -475,7 +499,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -488,10 +512,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="software.purpledragon.poi4s.kml.KmlReader#read" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="read(is:java.io.InputStream):software.purpledragon.poi4s.model.PoiFile"></a><a id="read(InputStream):PoiFile"></a>
+    </li><li name="software.purpledragon.poi4s.gpx.GpxParser#parseFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parseFile(is:java.io.InputStream):software.purpledragon.poi4s.model.PoiFile"></a><a id="parseFile(InputStream):PoiFile"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#read(is:java.io.InputStream):software.purpledragon.poi4s.model.PoiFile" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#parseFile(is:java.io.InputStream):software.purpledragon.poi4s.model.PoiFile" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -500,20 +524,21 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="is">is: <span class="extype" name="java.io.InputStream">InputStream</span></span>)</span><span class="result">: <a href="../model/PoiFile.html" class="extype" name="software.purpledragon.poi4s.model.PoiFile">PoiFile</a></span>
+        <span class="name">parseFile</span><span class="params">(<span name="is">is: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html#java.io.InputStream" class="extype" name="java.io.InputStream">InputStream</a></span>)</span><span class="result">: <a href="../model/PoiFile.html" class="extype" name="software.purpledragon.poi4s.model.PoiFile">PoiFile</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Parses a GPS data from the supplied <a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" class="extype" name="java.io.InputStream">java.io.InputStream</a> into a <a href="../model/PoiFile.html" class="extype" name="software.purpledragon.poi4s.model.PoiFile">model.PoiFile</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Parses a GPS data from the supplied <a href="http://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html" class="extype" name="java.io.InputStream">java.io.InputStream</a> into a <a href="../model/PoiFile.html" class="extype" name="software.purpledragon.poi4s.model.PoiFile">model.PoiFile</a>.
+</p></div><dl class="paramcmts block"><dt class="param">is</dt><dd class="cmt"><p>the stream to read from.</p></dd><dt>returns</dt><dd class="cmt"><p>the contents of the parsed GPS file.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="software.purpledragon.poi4s.gpx.GpxParser">GpxParser</a> → <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a></dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
-      <span class="defval" name="scala.this.throws.&lt;init&gt;$default$1[software.purpledragon.poi4s.kml.KmlParseException]">...</span>
+      <span class="defval" name="scala.this.throws.&lt;init&gt;$default$1[software.purpledragon.poi4s.exception.PoiParseException]">...</span>
     </span>)</span>
               
-        </dd></dl></div>
+        </dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../exception/PoiParseException.html" class="extype" name="software.purpledragon.poi4s.exception.PoiParseException"><code>exception.PoiParseException</code></a> if an error occurs while reading the file.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -529,7 +554,7 @@
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#toString():String" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -538,14 +563,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#wait():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -567,7 +592,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -589,7 +614,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/KmlReader$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -608,6 +633,40 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="software.purpledragon.poi4s.gpx.GpxParser#writeFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeFile(poiFile:software.purpledragon.poi4s.model.PoiFile,os:java.io.OutputStream,version:software.purpledragon.poi4s.gpx.GpxVersion):Unit"></a><a id="writeFile(PoiFile,OutputStream,GpxVersion):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#writeFile(poiFile:software.purpledragon.poi4s.model.PoiFile,os:java.io.OutputStream,version:software.purpledragon.poi4s.gpx.GpxVersion):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeFile</span><span class="params">(<span name="poiFile">poiFile: <a href="../model/PoiFile.html" class="extype" name="software.purpledragon.poi4s.model.PoiFile">PoiFile</a></span>, <span name="os">os: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html#java.io.OutputStream" class="extype" name="java.io.OutputStream">OutputStream</a></span>, <span name="version">version: <a href="GpxVersion.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion">GpxVersion</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Writes GPS data to the supplied <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html" class="extype" name="java.io.OutputStream">java.io.OutputStream</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Writes GPS data to the supplied <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html" class="extype" name="java.io.OutputStream">java.io.OutputStream</a>.
+</p></div><dl class="paramcmts block"><dt class="param">os</dt><dd class="cmt"><p>the stream to write to.</p></dd><dt class="param">version</dt><dd class="cmt"><p>Desired version of the file type to use when writing.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="software.purpledragon.poi4s.gpx.GpxParser">GpxParser</a> → <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../exception/PoiWriteException.html" class="extype" name="software.purpledragon.poi4s.exception.PoiWriteException"><code>exception.PoiWriteException</code></a> if an error occurs while writing the file.</p></span></dd></dl></div>
+    </li><li name="software.purpledragon.poi4s.gpx.GpxParser#writeFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeFile(poiFile:software.purpledragon.poi4s.model.PoiFile,os:java.io.OutputStream):Unit"></a><a id="writeFile(PoiFile,OutputStream):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/GpxParser.html#writeFile(poiFile:software.purpledragon.poi4s.model.PoiFile,os:java.io.OutputStream):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeFile</span><span class="params">(<span name="poiFile">poiFile: <a href="../model/PoiFile.html" class="extype" name="software.purpledragon.poi4s.model.PoiFile">PoiFile</a></span>, <span name="os">os: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html#java.io.OutputStream" class="extype" name="java.io.OutputStream">OutputStream</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Writes GPS data to the supplied <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html" class="extype" name="java.io.OutputStream">java.io.OutputStream</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Writes GPS data to the supplied <a href="http://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html" class="extype" name="java.io.OutputStream">java.io.OutputStream</a>.
+</p></div><dl class="paramcmts block"><dt class="param">os</dt><dd class="cmt"><p>the stream to write to.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="software.purpledragon.poi4s.gpx.GpxParser">GpxParser</a> → <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="../exception/PoiWriteException.html" class="extype" name="software.purpledragon.poi4s.exception.PoiWriteException"><code>exception.PoiWriteException</code></a> if an error occurs while writing the file.</p></span></dd></dl></div>
     </li>
               </ol>
             </div>
@@ -618,7 +677,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="software.purpledragon.poi4s.PoiParser">
+              <h3>Inherited from <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a>[<a href="GpxVersion.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion">GpxVersion</a>]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></h3>

@@ -19,7 +19,7 @@
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
         var toRoot = '../../../../';
@@ -125,10 +125,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a></dd></dl></div>
-    </li><li name="software.purpledragon.poi4s.kml" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="kml"></a><a id="kml:kml"></a>
+    </li><li name="software.purpledragon.poi4s.exception" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exception"></a><a id="exception:exception"></a>
       <span class="permalink">
-      <a href="../../../software/purpledragon/poi4s/index.html#kml" title="Permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#exception" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -138,46 +138,40 @@
       </span>
       <span class="symbol">
         <a title="" href="index.html">
-              <span class="name">kml</span>
+              <span class="name">exception</span>
             </a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="KmlParseException.html" title=""></a>
-                        <a href="KmlParseException.html" title="">
-                          KmlParseException
+                        <a class="class" href="PoiException.html" title="Base exception for errors thrown by poi4s."></a>
+                        <a href="PoiException.html" title="Base exception for errors thrown by poi4s.">
+                          PoiException
                         </a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="KmlReader$.html" title=""></a>
-                        <a href="KmlReader$.html" title="">
-                          KmlReader
+                        <a class="class" href="PoiParseException.html" title="Indicates an error during the parsing of a GPS file."></a>
+                        <a href="PoiParseException.html" title="Indicates an error during the parsing of a GPS file.">
+                          PoiParseException
                         </a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="KmlWriter$.html" title=""></a>
-                        <a href="KmlWriter$.html" title="">
-                          KmlWriter
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="" title=""></a>
-                        <a href="" title="">
-                          Placemark
+                        <a class="class" href="" title="Indicates an error while writing a GPS file."></a>
+                        <a href="" title="Indicates an error while writing a GPS file.">
+                          PoiWriteException
                         </a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="object value">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle object">o</div>
-        <p id="owner"><a href="../../../index.html" class="extype" name="software">software</a>.<a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a>.<a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a>.<a href="index.html" class="extype" name="software.purpledragon.poi4s.kml">kml</a></p>
-        <h1>Placemark<span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html" title="Permalink">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="software">software</a>.<a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a>.<a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a>.<a href="index.html" class="extype" name="software.purpledragon.poi4s.exception">exception</a></p>
+        <h1>PoiWriteException<span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -187,20 +181,31 @@
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Placemark</span>
+        <span class="name">PoiWriteException</span><span class="result"> extends <a href="PoiException.html" class="extype" name="software.purpledragon.poi4s.exception.PoiException">PoiException</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Indicates an error while writing a GPS file.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>0.0.2</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><a href="PoiException.html" class="extype" name="software.purpledragon.poi4s.exception.PoiException">PoiException</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html#java.lang.Exception" class="extype" name="java.lang.Exception">Exception</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a>, <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 164.00 118.00" height="118pt" width="164pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 160,-114 160,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="software.purpledragon.poi4s.exception.PoiWriteException (this class)" xlink:href="#inheritance-diagram"><path d="M123.6667,-49C123.6667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 123.6667,-24 123.6667,-24 127.8333,-24 132,-28.1667 132,-32.3333 132,-32.3333 132,-40.6667 132,-40.6667 132,-44.8333 127.8333,-49 123.6667,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-33.6" x="54.7793" text-anchor="start">PoiWriteException</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="software.purpledragon.poi4s.exception.PoiException" xlink:href="PoiException.html#inheritance-diagram"><path d="M114.1667,-110C114.1667,-110 41.8333,-110 41.8333,-110 37.6667,-110 33.5,-105.8333 33.5,-101.6667 33.5,-101.6667 33.5,-93.3333 33.5,-93.3333 33.5,-89.1667 37.6667,-85 41.8333,-85 41.8333,-85 114.1667,-85 114.1667,-85 118.3333,-85 122.5,-89.1667 122.5,-93.3333 122.5,-93.3333 122.5,-101.6667 122.5,-101.6667 122.5,-105.8333 118.3333,-110 114.1667,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../lib/class_diagram.png" y="-104.5" x="44" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-94.6" x="64.541" text-anchor="start">PoiException</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="PoiWriteException is a subtype of PoiException"><path d="M78,-77.7386C78,-68.3393 78,-57.3803 78,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="75.5501,-77.8607 78,-84.8608 80.4501,-77.8608 75.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -225,7 +230,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="software.purpledragon.poi4s.kml.Placemark"><span>Placemark</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="software.purpledragon.poi4s.exception.PoiWriteException"><span>PoiWriteException</span></li><li class="in" name="software.purpledragon.poi4s.exception.PoiException"><span>PoiException</span></li><li class="in" name="java.lang.Exception"><span>Exception</span></li><li class="in" name="java.lang.Throwable"><span>Throwable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -243,7 +248,42 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="software.purpledragon.poi4s.exception.PoiWriteException#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(message:String):software.purpledragon.poi4s.exception.PoiWriteException"></a><a id="&lt;init&gt;:PoiWriteException"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#&lt;init&gt;(message:String):software.purpledragon.poi4s.exception.PoiWriteException" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PoiWriteException</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+      </span>
+      
+      
+    </li><li name="software.purpledragon.poi4s.exception.PoiWriteException#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(message:String,cause:Throwable):software.purpledragon.poi4s.exception.PoiWriteException"></a><a id="&lt;init&gt;:PoiWriteException"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#&lt;init&gt;(message:String,cause:Throwable):software.purpledragon.poi4s.exception.PoiWriteException" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PoiWriteException</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="cause">cause: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>Message describing the error.</p></dd><dt class="param">cause</dt><dd class="cmt"><p>Cause of the error.</p></dd></dl></div>
+    </li></ol>
+            </div>
 
         
 
@@ -255,7 +295,7 @@
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -271,7 +311,7 @@
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html###():Int" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -287,7 +327,7 @@
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -300,10 +340,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="java.lang.Throwable#addSuppressed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addSuppressed(x$1:Throwable):Unit"></a><a id="addSuppressed(Throwable):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#addSuppressed(x$1:Throwable):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addSuppressed</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -319,7 +375,7 @@
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#clone():Object" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -341,7 +397,7 @@
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -357,7 +413,7 @@
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -370,10 +426,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="java.lang.Throwable#fillInStackTrace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fillInStackTrace():Throwable"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#fillInStackTrace():Throwable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fillInStackTrace</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#finalize():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -392,10 +464,26 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="java.lang.Throwable#getCause" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getCause():Throwable"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#getCause():Throwable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCause</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -408,10 +496,74 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="java.lang.Throwable#getLocalizedMessage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getLocalizedMessage():String"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#getLocalizedMessage():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLocalizedMessage</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li name="java.lang.Throwable#getMessage" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMessage():String"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#getMessage():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMessage</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li name="java.lang.Throwable#getStackTrace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getStackTrace():Array[StackTraceElement]"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#getStackTrace():Array[StackTraceElement]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getStackTrace</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/StackTraceElement.html#java.lang.StackTraceElement" class="extype" name="java.lang.StackTraceElement">StackTraceElement</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li name="java.lang.Throwable#getSuppressed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getSuppressed():Array[Throwable]"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#getSuppressed():Array[Throwable]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSuppressed</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#hashCode():Int" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -424,10 +576,26 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="java.lang.Throwable#initCause" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="initCause(x$1:Throwable):Throwable"></a><a id="initCause(Throwable):Throwable"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#initCause(x$1:Throwable):Throwable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initCause</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a></span>)</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -443,7 +611,7 @@
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -459,7 +627,7 @@
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#notify():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -475,7 +643,7 @@
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -488,10 +656,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="software.purpledragon.poi4s.kml.Placemark#parseCoordinates" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="parseCoordinates(in:String):(Double,Double,Option[Double])"></a><a id="parseCoordinates(String):(Double,Double,Option[Double])"></a>
+    </li><li name="java.lang.Throwable#printStackTrace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="printStackTrace(x$1:java.io.PrintWriter):Unit"></a><a id="printStackTrace(PrintWriter):Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#parseCoordinates(in:String):(Double,Double,Option[Double])" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#printStackTrace(x$1:java.io.PrintWriter):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -500,14 +668,62 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parseCoordinates</span><span class="params">(<span name="in">in: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: (<a href="http://www.scala-lang.org/api/2.12.3/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="http://www.scala-lang.org/api/2.12.3/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a>])</span>
+        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/PrintWriter.html#java.io.PrintWriter" class="extype" name="java.io.PrintWriter">PrintWriter</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li name="java.lang.Throwable#printStackTrace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="printStackTrace(x$1:java.io.PrintStream):Unit"></a><a id="printStackTrace(PrintStream):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#printStackTrace(x$1:java.io.PrintStream):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <a href="http://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html#java.io.PrintStream" class="extype" name="java.io.PrintStream">PrintStream</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
       
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li name="java.lang.Throwable#printStackTrace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="printStackTrace():Unit"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#printStackTrace():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">printStackTrace</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li name="java.lang.Throwable#setStackTrace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setStackTrace(x$1:Array[StackTraceElement]):Unit"></a><a id="setStackTrace(Array[StackTraceElement]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#setStackTrace(x$1:Array[StackTraceElement]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setStackTrace</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.3/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<a href="http://docs.oracle.com/javase/8/docs/api/java/lang/StackTraceElement.html#java.lang.StackTraceElement" class="extype" name="java.lang.StackTraceElement">StackTraceElement</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.3/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -520,10 +736,10 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="java.lang.Throwable#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#toString():String" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -532,14 +748,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable → AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#wait():Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -561,7 +777,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -583,7 +799,7 @@
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/Placemark$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/exception/PoiWriteException.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -612,7 +828,15 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="software.purpledragon.poi4s.exception.PoiException">
+              <h3>Inherited from <a href="PoiException.html" class="extype" name="software.purpledragon.poi4s.exception.PoiException">PoiException</a></h3>
+            </div><div class="parent" name="java.lang.Exception">
+              <h3>Inherited from <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html#java.lang.Exception" class="extype" name="java.lang.Exception">Exception</a></h3>
+            </div><div class="parent" name="java.lang.Throwable">
+              <h3>Inherited from <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html#java.lang.Throwable" class="extype" name="java.lang.Throwable">Throwable</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <a href="http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></h3>

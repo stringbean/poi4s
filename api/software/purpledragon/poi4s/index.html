@@ -19,7 +19,7 @@
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
-      
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
         var toRoot = '../../../';
@@ -123,6 +123,24 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon">purpledragon</a></dd></dl></div>
+    </li><li name="software.purpledragon.poi4s.exception" visbl="pub" class="indented4 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="exception"></a><a id="exception:exception"></a>
+      <span class="permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#exception" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="exception/index.html">
+              <span class="name">exception</span>
+            </a>
+      </span>
+      
+      
     </li><li name="software.purpledragon.poi4s.gpx" visbl="pub" class="indented4 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="gpx"></a><a id="gpx:gpx"></a>
       <span class="permalink">
@@ -177,25 +195,19 @@
       </span>
       
       
-    </li><li name="software.purpledragon.poi4s.util" visbl="pub" class="indented4 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="util"></a><a id="util:util"></a>
-      <span class="permalink">
-      <a href="../../../software/purpledragon/poi4s/index.html#util" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="util/index.html">
-              <span class="name">util</span>
-            </a>
-      </span>
-      
-      
-    </li>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="FileVersion.html" title="Representation of a version of a GPS file type."></a>
+                        <a href="FileVersion.html" title="Representation of a version of a GPS file type.">
+                          FileVersion
+                        </a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="PoiParser.html" title="Representation of a GPS file type."></a>
+                        <a href="PoiParser.html" title="Representation of a GPS file type.">
+                          PoiParser
+                        </a>
+                      </li>
               </ul>
             </div>
           </div>
@@ -232,7 +244,49 @@
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="software.purpledragon.poi4s.FileVersion" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="FileVersionextendsAnyRef"></a><a id="FileVersion:FileVersion"></a>
+      <span class="permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#FileVersionextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Representation of a version of a GPS file type." href="FileVersion.html">
+              <span class="name">FileVersion</span>
+            </a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Representation of a version of a GPS file type.</p><div class="fullcomment"><div class="comment cmt"><p>Representation of a version of a GPS file type. Implementations of <a href="PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a> use this to denote what version of
+the file format should be/was used.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>0.0.2</p></dd></dl></div>
+    </li><li name="software.purpledragon.poi4s.PoiParser" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="PoiParser[V&lt;:software.purpledragon.poi4s.FileVersion]extendsAnyRef"></a><a id="PoiParser[V&lt;:FileVersion]:PoiParser[V]"></a>
+      <span class="permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#PoiParser[V&lt;:software.purpledragon.poi4s.FileVersion]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Representation of a GPS file type." href="PoiParser.html">
+              <span class="name">PoiParser</span>
+            </a><span class="tparams">[<span name="V">V &lt;: <a href="FileVersion.html" class="extype" name="software.purpledragon.poi4s.FileVersion">FileVersion</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Representation of a GPS file type.</p><div class="fullcomment"><div class="comment cmt"><p>Representation of a GPS file type. Provides interfaces for reading and write files of the given type.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>0.0.2</p></dd></dl></div>
+    </li></ol>
+            </div>
 
         
 

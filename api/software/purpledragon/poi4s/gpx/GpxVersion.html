@@ -19,7 +19,7 @@
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
         var toRoot = '../../../../';
@@ -145,33 +145,21 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="GpxParseException.html" title=""></a>
-                        <a href="GpxParseException.html" title="">
-                          GpxParseException
+                        <a class="object" href="Gpx$.html" title=""></a>
+                        <a href="Gpx$.html" title="">
+                          Gpx
                         </a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="GpxReader$.html" title=""></a>
-                        <a href="GpxReader$.html" title="">
-                          GpxReader
+                        <a class="class" href="GpxParser.html" title="Parse/writer for GPX files."></a>
+                        <a href="GpxParser.html" title="Parse/writer for GPX files.">
+                          GpxParser
                         </a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="GpxVersion$.html" title=""></a>
-                        <a class="class" href="" title=""></a>
-                        <a href="" title="">
+                        <a class="object" href="GpxVersion$.html" title="Supported versions of GPX files."></a>
+                        <a class="class" href="" title="Representation of a supported version of GPX files."></a>
+                        <a href="" title="Representation of a supported version of GPX files.">
                           GpxVersion
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="GpxWaypoint$.html" title=""></a>
-                        <a href="GpxWaypoint$.html" title="">
-                          GpxWaypoint
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="GpxWriter$.html" title=""></a>
-                        <a href="GpxWriter$.html" title="">
-                          GpxWriter
                         </a>
                       </li>
               </ul>
@@ -198,22 +186,33 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">GpxVersion</span><span class="result"> extends <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span></span>
+        <span class="name">GpxVersion</span><span class="result"> extends <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span> with <a href="../FileVersion.html" class="extype" name="software.purpledragon.poi4s.FileVersion">FileVersion</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Representation of a supported version of GPX files. See the companion object for possible values.
+</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="enumeratum.EnumEntry">EnumEntry</span>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../FileVersion.html" class="extype" name="software.purpledragon.poi4s.FileVersion">FileVersion</a>, <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="GpxVersion$$Version10$.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion.Version10">Version10</a>, <a href="GpxVersion$$Version11$.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion.Version11">Version11</a></div>
-          </div></div>
+          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 190.00 155.00" height="155pt" width="190pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 186,-151 186,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="software.purpledragon.poi4s.gpx.GpxVersion (this class)" xlink:href="#inheritance-diagram"><path d="M124.6667,-86C124.6667,-86 57.3333,-86 57.3333,-86 53.1667,-86 49,-81.8333 49,-77.6667 49,-77.6667 49,-69.3333 49,-69.3333 49,-65.1667 53.1667,-61 57.3333,-61 57.3333,-61 124.6667,-61 124.6667,-61 128.8333,-61 133,-65.1667 133,-69.3333 133,-69.3333 133,-77.6667 133,-77.6667 133,-81.8333 128.8333,-86 124.6667,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../../../lib/class_diagram.png" y="-80.5" x="59" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-70.6" x="79.709" text-anchor="start">GpxVersion</text></a></g></g><!-- node1 --><g class="node object" id="graph1_1"><g id="a_object|graph1_1"><a xlink:title="software.purpledragon.poi4s.gpx.GpxVersion.Version10" xlink:href="GpxVersion$$Version10$.html#inheritance-diagram"><path d="M73.6667,-25C73.6667,-25 12.3333,-25 12.3333,-25 8.1667,-25 4,-20.8333 4,-16.6667 4,-16.6667 4,-8.3333 4,-8.3333 4,-4.1667 8.1667,0 12.3333,0 12.3333,0 73.6667,0 73.6667,0 77.8333,0 82,-4.1667 82,-8.3333 82,-8.3333 82,-16.6667 82,-16.6667 82,-20.8333 77.8333,-25 73.6667,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../../lib/object_diagram.png" y="-19.5" x="14" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-9.6" x="34.5957" text-anchor="start">Version10</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Version10 is a subtype of GpxVersion"><path d="M76.539,-55.1225C68.9129,-45.431 59.7521,-33.7891 52.9329,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="74.8002,-56.8747 81.0544,-60.8608 78.651,-53.8446 74.8002,-56.8747" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node object" id="graph1_2"><g id="a_object|graph1_2"><a xlink:title="software.purpledragon.poi4s.gpx.GpxVersion.Version11" xlink:href="GpxVersion$$Version11$.html#inheritance-diagram"><path d="M169.6667,-25C169.6667,-25 108.3333,-25 108.3333,-25 104.1667,-25 100,-20.8333 100,-16.6667 100,-16.6667 100,-8.3333 100,-8.3333 100,-4.1667 104.1667,0 108.3333,0 108.3333,0 169.6667,0 169.6667,0 173.8333,0 178,-4.1667 178,-8.3333 178,-8.3333 178,-16.6667 178,-16.6667 178,-20.8333 173.8333,-25 169.6667,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../../lib/object_diagram.png" y="-19.5" x="110" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-9.6" x="130.8906" text-anchor="start">Version11</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="Version11 is a subtype of GpxVersion"><path d="M105.461,-55.1225C113.0871,-45.431 122.2479,-33.7891 129.0671,-25.123" stroke="#d4d4d4" fill="none"></path><polygon points="103.349,-53.8446 100.9456,-60.8608 107.1998,-56.8747 103.349,-53.8446" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="enumeratum.EnumEntry"><path d="M73.6667,-147C73.6667,-147 8.3333,-147 8.3333,-147 4.1667,-147 0,-142.8333 0,-138.6667 0,-138.6667 0,-130.3333 0,-130.3333 0,-126.1667 4.1667,-122 8.3333,-122 8.3333,-122 73.6667,-122 73.6667,-122 77.8333,-122 82,-126.1667 82,-130.3333 82,-130.3333 82,-138.6667 82,-138.6667 82,-142.8333 77.8333,-147 73.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../../lib/trait_diagram.png" y="-141.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-131.6" x="30.6035" text-anchor="start">EnumEntry</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="GpxVersion is a subtype of EnumEntry"><path d="M55.8391,-116.3963C63.8271,-106.6509 73.4829,-94.8708 80.6532,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="53.9027,-114.8939 51.36,-121.8608 57.6924,-118.0001 53.9027,-114.8939" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="software.purpledragon.poi4s.FileVersion" xlink:href="../FileVersion.html#inheritance-diagram"><path d="M173.6667,-147C173.6667,-147 108.3333,-147 108.3333,-147 104.1667,-147 100,-142.8333 100,-138.6667 100,-138.6667 100,-130.3333 100,-130.3333 100,-126.1667 104.1667,-122 108.3333,-122 108.3333,-122 173.6667,-122 173.6667,-122 177.8333,-122 182,-126.1667 182,-130.3333 182,-130.3333 182,-138.6667 182,-138.6667 182,-142.8333 177.8333,-147 173.6667,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../../lib/trait_diagram.png" y="-141.5" x="110" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-131.6" x="130.5996" text-anchor="start">FileVersion</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="GpxVersion is a subtype of FileVersion"><path d="M126.1609,-116.3963C118.1729,-106.6509 108.5171,-94.8708 101.3468,-86.123" stroke="#d4d4d4" fill="none"></path><polygon points="124.3076,-118.0001 130.64,-121.8608 128.0973,-114.8939 124.3076,-118.0001" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -238,7 +237,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="software.purpledragon.poi4s.gpx.GpxVersion"><span>GpxVersion</span></li><li class="in" name="enumeratum.EnumEntry"><span>EnumEntry</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="software.purpledragon.poi4s.gpx.GpxVersion"><span>GpxVersion</span></li><li class="in" name="software.purpledragon.poi4s.FileVersion"><span>FileVersion</span></li><li class="in" name="enumeratum.EnumEntry"><span>EnumEntry</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -545,7 +544,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -625,7 +624,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="enumeratum.EnumEntry">
+        <div class="parent" name="software.purpledragon.poi4s.FileVersion">
+              <h3>Inherited from <a href="../FileVersion.html" class="extype" name="software.purpledragon.poi4s.FileVersion">FileVersion</a></h3>
+            </div><div class="parent" name="enumeratum.EnumEntry">
               <h3>Inherited from <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.3/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></h3>

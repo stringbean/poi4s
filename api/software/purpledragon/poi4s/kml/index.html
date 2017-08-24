@@ -19,7 +19,7 @@
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
         var toRoot = '../../../../';
@@ -125,6 +125,24 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a></dd></dl></div>
+    </li><li name="software.purpledragon.poi4s.exception" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exception"></a><a id="exception:exception"></a>
+      <span class="permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#exception" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../exception/index.html">
+              <span class="name">exception</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li name="software.purpledragon.poi4s.gpx" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gpx"></a><a id="gpx:gpx"></a>
       <span class="permalink">
@@ -161,27 +179,15 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="KmlParseException.html" title=""></a>
-                        <a href="KmlParseException.html" title="">
-                          KmlParseException
+                        <a class="class" href="KmlParser.html" title="Parse/writer for KML files."></a>
+                        <a href="KmlParser.html" title="Parse/writer for KML files.">
+                          KmlParser
                         </a>
                       </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="KmlReader$.html" title=""></a>
-                        <a href="KmlReader$.html" title="">
-                          KmlReader
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="KmlWriter$.html" title=""></a>
-                        <a href="KmlWriter$.html" title="">
-                          KmlWriter
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="Placemark$.html" title=""></a>
-                        <a href="Placemark$.html" title="">
-                          Placemark
+                        <a class="object" href="KmlVersion$.html" title="Supported versions of KML files."></a>
+                        <a class="class" href="KmlVersion.html" title="Representation of a supported version of KML files."></a>
+                        <a href="KmlVersion.html" title="Representation of a supported version of KML files.">
+                          KmlVersion
                         </a>
                       </li><li name="software.purpledragon.poi4s.model" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="model"></a><a id="model:model"></a>
@@ -197,24 +203,6 @@
       <span class="symbol">
         <a title="" href="../model/index.html">
               <span class="name">model</span>
-            </a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
-    </li><li name="software.purpledragon.poi4s.util" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="util"></a><a id="util:util"></a>
-      <span class="permalink">
-      <a href="../../../software/purpledragon/poi4s/index.html#util" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../util/index.html">
-              <span class="name">util</span>
             </a>
       </span>
       
@@ -282,10 +270,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="software.purpledragon.poi4s.kml.KmlParseException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="KmlParseExceptionextendsException"></a><a id="KmlParseException:KmlParseException"></a>
+              <ol><li name="software.purpledragon.poi4s.kml.KmlParser" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KmlParserextendsPoiParser[software.purpledragon.poi4s.kml.KmlVersion]"></a><a id="KmlParser:KmlParser"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/index.html#KmlParseExceptionextendsException" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/kml/index.html#KmlParserextendsPoiParser[software.purpledragon.poi4s.kml.KmlVersion]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -294,12 +282,32 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="KmlParseException.html">
-              <span class="name">KmlParseException</span>
-            </a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+        <a title="Parse/writer for KML files." href="KmlParser.html">
+              <span class="name">KmlParser</span>
+            </a><span class="result"> extends <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a>[<a href="KmlVersion.html" class="extype" name="software.purpledragon.poi4s.kml.KmlVersion">KmlVersion</a>]</span>
       </span>
       
+      <p class="shortcomment cmt">Parse/writer for KML files.</p><div class="fullcomment"><div class="comment cmt"><p>Parse/writer for KML files. Supports KML 2.2.
+</p></div></div>
+    </li><li name="software.purpledragon.poi4s.kml.KmlVersion" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="KmlVersionextendsEnumEntrywithFileVersion"></a><a id="KmlVersion:KmlVersion"></a>
+      <span class="permalink">
+      <a href="../../../../software/purpledragon/poi4s/kml/index.html#KmlVersionextendsEnumEntrywithFileVersion" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Representation of a supported version of KML files." href="KmlVersion.html">
+              <span class="name">KmlVersion</span>
+            </a><span class="result"> extends <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span> with <a href="../FileVersion.html" class="extype" name="software.purpledragon.poi4s.FileVersion">FileVersion</a></span>
+      </span>
       
+      <p class="shortcomment cmt">Representation of a supported version of KML files.</p><div class="fullcomment"><div class="comment cmt"><p>Representation of a supported version of KML files. See the companion object for possible values.
+</p></div></div>
     </li></ol>
             </div>
 
@@ -308,10 +316,10 @@
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="software.purpledragon.poi4s.kml.KmlReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="KmlReader"></a><a id="KmlReader:KmlReader"></a>
+                <li name="software.purpledragon.poi4s.kml.KmlVersion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KmlVersion"></a><a id="KmlVersion:KmlVersion"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/index.html#KmlReader" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/kml/index.html#KmlVersion" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -320,48 +328,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="KmlReader$.html">
-              <span class="name">KmlReader</span>
+        <a title="Supported versions of KML files." href="KmlVersion$.html">
+              <span class="name">KmlVersion</span>
             </a>
       </span>
       
-      
-    </li><li name="software.purpledragon.poi4s.kml.KmlWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="KmlWriter"></a><a id="KmlWriter:KmlWriter"></a>
-      <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/index.html#KmlWriter" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="KmlWriter$.html">
-              <span class="name">KmlWriter</span>
-            </a>
-      </span>
-      
-      
-    </li><li name="software.purpledragon.poi4s.kml.Placemark" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Placemark"></a><a id="Placemark:Placemark"></a>
-      <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/kml/index.html#Placemark" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Placemark$.html">
-              <span class="name">Placemark</span>
-            </a>
-      </span>
-      
-      
+      <p class="shortcomment cmt">Supported versions of KML files.</p>
     </li>
               </ol>
             </div>

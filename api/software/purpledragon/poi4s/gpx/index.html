@@ -19,7 +19,7 @@
       <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
-      
+      <script type="text/javascript" src="../../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
         var toRoot = '../../../../';
@@ -125,6 +125,24 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="software.purpledragon">purpledragon</a></dd></dl></div>
+    </li><li name="software.purpledragon.poi4s.exception" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="exception"></a><a id="exception:exception"></a>
+      <span class="permalink">
+      <a href="../../../software/purpledragon/poi4s/index.html#exception" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../exception/index.html">
+              <span class="name">exception</span>
+            </a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li name="software.purpledragon.poi4s.gpx" visbl="pub" class="indented4 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="gpx"></a><a id="gpx:gpx"></a>
       <span class="permalink">
@@ -143,33 +161,21 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="GpxParseException.html" title=""></a>
-                        <a href="GpxParseException.html" title="">
-                          GpxParseException
+                        <a class="object" href="Gpx$.html" title=""></a>
+                        <a href="Gpx$.html" title="">
+                          Gpx
                         </a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="object" href="GpxReader$.html" title=""></a>
-                        <a href="GpxReader$.html" title="">
-                          GpxReader
+                        <a class="class" href="GpxParser.html" title="Parse/writer for GPX files."></a>
+                        <a href="GpxParser.html" title="Parse/writer for GPX files.">
+                          GpxParser
                         </a>
                       </li><li class="current-entities indented4">
-                        <a class="object" href="GpxVersion$.html" title=""></a>
-                        <a class="class" href="GpxVersion.html" title=""></a>
-                        <a href="GpxVersion.html" title="">
+                        <a class="object" href="GpxVersion$.html" title="Supported versions of GPX files."></a>
+                        <a class="class" href="GpxVersion.html" title="Representation of a supported version of GPX files."></a>
+                        <a href="GpxVersion.html" title="Representation of a supported version of GPX files.">
                           GpxVersion
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="GpxWaypoint$.html" title=""></a>
-                        <a href="GpxWaypoint$.html" title="">
-                          GpxWaypoint
-                        </a>
-                      </li><li class="current-entities indented4">
-                        <span class="separator"></span>
-                        <a class="object" href="GpxWriter$.html" title=""></a>
-                        <a href="GpxWriter$.html" title="">
-                          GpxWriter
                         </a>
                       </li><li name="software.purpledragon.poi4s.kml" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="kml"></a><a id="kml:kml"></a>
@@ -203,24 +209,6 @@
       <span class="symbol">
         <a title="" href="../model/index.html">
               <span class="name">model</span>
-            </a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="software.purpledragon.poi4s">poi4s</a></dd></dl></div>
-    </li><li name="software.purpledragon.poi4s.util" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="util"></a><a id="util:util"></a>
-      <span class="permalink">
-      <a href="../../../software/purpledragon/poi4s/index.html#util" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../util/index.html">
-              <span class="name">util</span>
             </a>
       </span>
       
@@ -288,10 +276,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="software.purpledragon.poi4s.gpx.GpxParseException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GpxParseExceptionextendsException"></a><a id="GpxParseException:GpxParseException"></a>
+              <ol><li name="software.purpledragon.poi4s.gpx.GpxParser" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GpxParserextendsPoiParser[software.purpledragon.poi4s.gpx.GpxVersion]"></a><a id="GpxParser:GpxParser"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxParseExceptionextendsException" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxParserextendsPoiParser[software.purpledragon.poi4s.gpx.GpxVersion]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -300,16 +288,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="GpxParseException.html">
-              <span class="name">GpxParseException</span>
-            </a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+        <a title="Parse/writer for GPX files." href="GpxParser.html">
+              <span class="name">GpxParser</span>
+            </a><span class="result"> extends <a href="../PoiParser.html" class="extype" name="software.purpledragon.poi4s.PoiParser">PoiParser</a>[<a href="GpxVersion.html" class="extype" name="software.purpledragon.poi4s.gpx.GpxVersion">GpxVersion</a>]</span>
       </span>
       
-      
-    </li><li name="software.purpledragon.poi4s.gpx.GpxVersion" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="GpxVersionextendsEnumEntry"></a><a id="GpxVersion:GpxVersion"></a>
+      <p class="shortcomment cmt">Parse/writer for GPX files.</p><div class="fullcomment"><div class="comment cmt"><p>Parse/writer for GPX files. Supports GPX 1.0 &amp; 1.1.
+</p></div></div>
+    </li><li name="software.purpledragon.poi4s.gpx.GpxVersion" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="GpxVersionextendsEnumEntrywithFileVersion"></a><a id="GpxVersion:GpxVersion"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxVersionextendsEnumEntry" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxVersionextendsEnumEntrywithFileVersion" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -318,12 +307,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="GpxVersion.html">
+        <a title="Representation of a supported version of GPX files." href="GpxVersion.html">
               <span class="name">GpxVersion</span>
-            </a><span class="result"> extends <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span></span>
+            </a><span class="result"> extends <span class="extype" name="enumeratum.EnumEntry">EnumEntry</span> with <a href="../FileVersion.html" class="extype" name="software.purpledragon.poi4s.FileVersion">FileVersion</a></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Representation of a supported version of GPX files.</p><div class="fullcomment"><div class="comment cmt"><p>Representation of a supported version of GPX files. See the companion object for possible values.
+</p></div></div>
     </li></ol>
             </div>
 
@@ -332,10 +322,10 @@
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="software.purpledragon.poi4s.gpx.GpxReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GpxReader"></a><a id="GpxReader:GpxReader"></a>
+                <li name="software.purpledragon.poi4s.gpx.Gpx" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Gpx"></a><a id="Gpx:Gpx"></a>
       <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxReader" title="Permalink">
+      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#Gpx" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -344,8 +334,8 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="GpxReader$.html">
-              <span class="name">GpxReader</span>
+        <a title="" href="Gpx$.html">
+              <span class="name">Gpx</span>
             </a>
       </span>
       
@@ -362,48 +352,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="GpxVersion$.html">
+        <a title="Supported versions of GPX files." href="GpxVersion$.html">
               <span class="name">GpxVersion</span>
             </a>
       </span>
       
-      
-    </li><li name="software.purpledragon.poi4s.gpx.GpxWaypoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GpxWaypoint"></a><a id="GpxWaypoint:GpxWaypoint"></a>
-      <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxWaypoint" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="GpxWaypoint$.html">
-              <span class="name">GpxWaypoint</span>
-            </a>
-      </span>
-      
-      
-    </li><li name="software.purpledragon.poi4s.gpx.GpxWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GpxWriter"></a><a id="GpxWriter:GpxWriter"></a>
-      <span class="permalink">
-      <a href="../../../../software/purpledragon/poi4s/gpx/index.html#GpxWriter" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="GpxWriter$.html">
-              <span class="name">GpxWriter</span>
-            </a>
-      </span>
-      
-      
+      <p class="shortcomment cmt">Supported versions of GPX files.</p>
     </li>
               </ol>
             </div>
