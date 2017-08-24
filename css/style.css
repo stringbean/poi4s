@@ -1072,7 +1072,7 @@ body {
   font-family: "Lato", sans-serif;
   font-size: 15px;
   line-height: 1.7;
-  color: #7f8c8d;
+  color: #6c7677;
   background-color: #fff; }
 
 input,
@@ -2438,7 +2438,7 @@ output {
   padding-top: 7px;
   font-size: 15px;
   line-height: 1.7;
-  color: #7f8c8d; }
+  color: #6c7677; }
 
 .form-control {
   display: block;
@@ -2447,7 +2447,7 @@ output {
   padding: 6px 12px;
   font-size: 15px;
   line-height: 1.7;
-  color: #7f8c8d;
+  color: #6c7677;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
@@ -2788,7 +2788,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #c2c9c9; }
+  color: #adb4b5; }
 
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3485,7 +3485,7 @@ tbody.collapse.in {
   font-size: 15px;
   font-weight: normal;
   line-height: 1;
-  color: #7f8c8d;
+  color: #6c7677;
   text-align: center;
   background-color: #ecf0f1;
   border: 1px solid #ccc;
@@ -3600,7 +3600,7 @@ tbody.collapse.in {
       .nav-tabs > li > a:hover {
         border-color: #ecf0f1 #ecf0f1 #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-      color: #7f8c8d;
+      color: #6c7677;
       background-color: #fff;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
@@ -4337,7 +4337,7 @@ a.badge:hover, a.badge:focus {
     margin-right: auto; }
   .thumbnail .caption {
     padding: 9px;
-    color: #7f8c8d; }
+    color: #6c7677; }
 
 a.thumbnail:hover,
 a.thumbnail:focus,
