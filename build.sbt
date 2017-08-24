@@ -22,10 +22,13 @@ lazy val root = project
   .in(file("."))
   .aggregate(common, gpx, kml)
   .settings(
+    // don't publish the empty root project
     publish := {},
     publishSigned := {},
     publishLocal := {},
     publishLocalSigned := {},
+    bintrayUnpublish := {},
+    bintraySyncMavenCentral := {},
     scalacOptions in Compile in doc ++= Seq(
       "-doc-root-content", baseDirectory.value + "/root-scaladoc.txt"
     )
