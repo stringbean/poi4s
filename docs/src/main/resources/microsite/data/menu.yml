@@ -1,4 +1,12 @@
 options:
+  - title: Getting Started
+    url: docs/index.html
+    menu_type: docs
+    menu_section: docs
+  - title: Supported Formats
+    url: docs/formats.html
+    menu_type: docs
+    menu_section: docs
   - title: Scaladoc
     url: api/index.html
     menu_type: docs
