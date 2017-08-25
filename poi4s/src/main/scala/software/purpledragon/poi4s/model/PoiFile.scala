@@ -21,7 +21,7 @@ import java.time.Instant
 import software.purpledragon.poi4s.FileVersion
 
 /**
-  * Representation of a file containing GPS data, such as [[Waypoint]]s or POI.
+  * Representation of a file containing GPS data, such as [[Waypoint]]s or [[Route]]s.
   *
   * @since 0.0.1
   * @param name Name of the file.
@@ -30,6 +30,7 @@ import software.purpledragon.poi4s.FileVersion
   * @param version Version of the file?
   * @param createdAt Timestamp of when the file was created.
   * @param waypoints List of waypoints.
+  * @param routes List of routes to destinations.
   */
 case class PoiFile(
     name: Option[String] = None,
@@ -37,7 +38,8 @@ case class PoiFile(
     creator: Option[String] = None,
     version: Option[FileVersion] = None,
     createdAt: Option[Instant] = None,
-    waypoints: Seq[Waypoint] = Nil) {
+    waypoints: Seq[Waypoint] = Nil,
+    routes: Seq[Route] = Nil) {
 
   // TODO include meta about origin file
 
@@ -89,4 +91,18 @@ case class PoiFile(
     * @return a new file with the appended waypoints.
     */
   def ++(wps: Seq[Waypoint]): PoiFile = copy(waypoints = waypoints ++ wps)
+
+  /** A copy of this file with the specified routes. Any existing routes will be replaced.
+    *
+    * @param routes the routes to add to this file.
+    * @return a new file with the routes.
+    */
+  def withRoutes(routes: Seq[Route]): PoiFile = copy(routes = routes)
+
+  /** A copy of this file with the route appended to the list of routes.
+    *
+    * @param route the route to add to this file.
+    * @return a new file with the appended route.
+    */
+  def +(route: Route): PoiFile = copy(routes = routes :+ route)
 }

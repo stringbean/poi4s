@@ -117,4 +117,35 @@ class PoiFileSpec extends FlatSpec with Matchers {
       'waypoints (waypoints)
     )
   }
+
+  "PoiFile.withRoutes" should "return a new copy with routes" in {
+    val routes = Seq(
+      Route(name = Some("route 1")),
+      Route(name = Some("route 2"))
+    )
+    val updated = poiFile.withRoutes(routes)
+    updated should not be theSameInstanceAs(poiFile)
+
+    updated should have(
+      'name (None),
+      'description (None),
+      'creator (None),
+      'createdAt (None),
+      'routes (routes)
+    )
+  }
+
+  "PoiFile + route" should "return a new copy with the additional route" in {
+    val route = Route(name = Some("route 1"))
+    val updated = poiFile + route
+    updated should not be theSameInstanceAs(poiFile)
+
+    updated should have(
+      'name (None),
+      'description (None),
+      'creator (None),
+      'createdAt (None),
+      'routes (Seq(route))
+    )
+  }
 }
