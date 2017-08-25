@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1"
+     creator="Memory-Map 5.4.2.1089 http://www.memory-map.com"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://www.topografix.com/GPX/1/1"
+     xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+    <rte>
+        <name>Grizedale</name>
+        <rtept lat="54.3401727421" lon="-3.0233466401">
+            <name>WP19601</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3392044031" lon="-3.0262450573">
+            <name>WP19602</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3380752863" lon="-3.0269090760">
+            <name>WP19603</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3346652586" lon="-3.0262857948">
+            <name>WP19604</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3338558808" lon="-3.0263425325">
+            <name>WP19605</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3327189029" lon="-3.0279290091">
+            <name>WP19606</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3302458376" lon="-3.0280979922">
+            <name>WP19607</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3269925750" lon="-3.0301696014">
+            <name>WP19608</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3257220759" lon="-3.0315986049">
+            <name>WP19609</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3248394450" lon="-3.0349592515">
+            <name>WP19610</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3237135804" lon="-3.0352384961">
+            <name>WP19611</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3222355398" lon="-3.0346632482">
+            <name>WP19612</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3218291998" lon="-3.0348836737">
+            <name>WP19613</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3222613240" lon="-3.0368932875">
+            <name>WP19614</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3217313478" lon="-3.0410311867">
+            <name>WP19615</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3219280837" lon="-3.0442649064">
+            <name>WP19616</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3226772216" lon="-3.0459751663">
+            <name>WP19617</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3226713487" lon="-3.0518176294">
+            <name>WP19618</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3224533487" lon="-3.0561940054">
+            <name>WP19619</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3236026307" lon="-3.0583760466">
+            <name>WP19620</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3258351114" lon="-3.0548967812">
+            <name>WP19621</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3274720217" lon="-3.0527090005">
+            <name>WP19622</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3278072975" lon="-3.0503340957">
+            <name>WP19623</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3290719952" lon="-3.0495974443">
+            <name>WP19624</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3312915506" lon="-3.0475778788">
+            <name>WP19625</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3321698697" lon="-3.0447551229">
+            <name>WP19626</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3319142699" lon="-3.0431338746">
+            <name>WP19627</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3344119159" lon="-3.0401211731">
+            <name>WP19628</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3346471624" lon="-3.0388967315">
+            <name>WP19629</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3347562047" lon="-3.0366694112">
+            <name>WP19630</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3357631261" lon="-3.0345415237">
+            <name>WP19631</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3380326283" lon="-3.0319068379">
+            <name>WP19632</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3389866567" lon="-3.0307002261">
+            <name>WP19633</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3391503093" lon="-3.0273204087">
+            <name>WP19634</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+        <rtept lat="54.3392044031" lon="-3.0262450573">
+            <name>WP19602</name>
+            <sym>Dot</sym>
+            <type>Waypoints</type>
+        </rtept>
+    </rte>
+</gpx>

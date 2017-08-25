@@ -83,13 +83,15 @@ class GpxParser extends PoiParser[GpxVersion] {
     val created = (xml \ "time").instantOption
 
     val waypoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion10)
+    val routes = (xml \\ "rte").map(GpxRoute.parseVersion10)
 
     PoiFile(
       name = name,
       creator = Some(creator),
       createdAt = created,
       version = Some(GpxVersion.Version10),
-      waypoints = waypoints
+      waypoints = waypoints,
+      routes = routes
     )
   }
 
@@ -100,13 +102,15 @@ class GpxParser extends PoiParser[GpxVersion] {
     val created = (xml \ "metadata" \ "time").instantOption
 
     val waypoints = (xml \\ "wpt").map(GpxWaypoint.parseVersion11)
+    val routes = (xml \\ "rte").map(GpxRoute.parseVersion11)
 
     PoiFile(
       name = name,
       creator = Some(creator),
       createdAt = created,
       version = Some(GpxVersion.Version11),
-      waypoints = waypoints
+      waypoints = waypoints,
+      routes = routes
     )
   }
 
