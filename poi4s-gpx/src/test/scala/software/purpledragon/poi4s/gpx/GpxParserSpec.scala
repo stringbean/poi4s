@@ -246,7 +246,7 @@ class GpxParserSpec extends FlatSpec with Matchers with XmlMatchers {
         Waypoint(54.3380326283, -3.0319068379).withName("WP19632"),
         Waypoint(54.3389866567, -3.0307002261).withName("WP19633"),
         Waypoint(54.3391503093, -3.0273204087).withName("WP19634"),
-        Waypoint(54.3392044031, -3.0262450573).withName("WP19602"),
+        Waypoint(54.3392044031, -3.0262450573).withName("WP19602")
       ))
 
 }
